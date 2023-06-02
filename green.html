@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .cal input{
+            width: 3rem;
+            height: 2rem;
+            margin-left: 9px;
+            
+            border: 1px solid plum;
+            margin: 20px;
+            font-size: 25px;        
+        }
+        .cal button{
+            width: 2rem;
+            height: 2rem;
+            margin: 30px;
+            background-color: plum;
+            border: 2px solid plum;
+            color: cornflowerblue;
+            font-size: 25px;
+        }
+        .cal h3{
+            font-size: 30px;
+            color: brown;
+        }
+       
+    </style>
+</head>
+<body>
+    <iframe src="" frameborder="0"></iframe>
+
+       
+        <div  class="cal">
+            <h3>
+            Simple Calculator
+             </h3>
+                <input type="text" name="" id="input1" >
+                
+                <span id="symbol"></span>
+                <input type="text" id="input2">
+                <span id="answer"></span>
+                <br>
+                <button class="" onclick="return(add())">+</button>
+                <button class="" onclick="minus()">-</button>
+                <br>
+                <button class="" onclick="dvd()">/</button>
+                <button class="" onclick="times()">x</button>
+                
+         
+        </div>
+    
+
+    <script>
+        function add(){
+            let a= document.getElementById('input1').value;
+            let b= document.getElementById('input2').value;
+            a= +a;
+            b= +b;
+            let k= a+b;
+            let c= document.getElementById('symbol').innerHTML='+';
+
+            let d= document.getElementById('answer').innerHTML='='+k;
+
+        }
+
+        function minus(){
+            let e= document.getElementById('input1').value;
+            let f= document.getElementById('input2').value;
+            e= +e;
+            f= +f;
+            let l= e-f;
+            let g= document.getElementById('symbol').innerHTML='-';
+
+            let h= document.getElementById('answer').innerHTML='='+l;
+
+        }
+
+        function dvd(){
+            let i= document.getElementById('input1').value;
+            let j= document.getElementById('input2').value;
+            i= +i;
+            j= +j;
+            let m= i/j;
+            let n= document.getElementById('symbol').innerHTML='/';
+
+            let o= document.getElementById('answer').innerHTML='='+m;
+
+        }
+
+        function times(){
+            let p= document.getElementById('input1').value;
+            let q= document.getElementById('input2').value;
+            p= +p;
+            q= +q;
+            let r= p*q;
+            let s= document.getElementById('symbol').innerHTML='x';
+
+            let t= document.getElementById('answer').innerHTML='='+r;
+
+        }
+    </script>
+</body>
+</html>
