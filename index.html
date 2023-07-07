@@ -3,14 +3,14 @@
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
         body{
-            background-color: black ;
+            background-color: black;
         }
         .index h2{
           font-size: 26px;
@@ -186,6 +186,39 @@
             margin-top: 10%;
             margin-left: 10%;
         }
+        .but{
+            float: right;
+            position: fixed;
+            top: 80vh;
+            right: 10;
+        }
+        .tropical h1{
+            color: antiquewhite;
+            font-size: 33px;
+            text-align: left;
+        }
+        .tropical button{
+            width: 8rem;
+            height: 2.5rem;
+            background-color: plum;
+            color: cornflowerblue;
+            border: 2px black solid;
+            font-size: 22px;
+
+        }
+        .tropical span{
+            font-size: 20px;
+            color: tomato;
+            text-align: center;
+        }
+        .tropical p{
+            text-align: left;
+            margin-left: 0;
+        }
+        .tropical img{
+            background-color: black;
+        }
+        
         @media screen and (max-width :768px){
           .index{
             margin-left: 30px;
@@ -223,7 +256,7 @@
 <body>
 
 
-    <nav id="navbar-example2" class="navbar navbar-light bg-light px-3 container-fluid">
+    <nav id="navbar-example2" style="position: sticky; top: 0; overflow-x: hidden;" class=" navbar navbar-light bg-light px-3">
         <a class="navbar-brand" href="#">JAVASCRIPT</a>
         <ul class="nav nav-pills">
           <li class="nav-item">
@@ -238,7 +271,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#scrollspyHeading4">Operators</a>
           </li>
-          <li class="nav-item dropdown">
+          <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">JS</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#scrollspyHeading5">Greeting</a></li>
@@ -247,7 +280,7 @@
               <li><a class="dropdown-item" href="#scrollspyHeading7">Calculator</a></li>
               <li><a class="dropdown-item" href="#scrollspyHeading8">Guess Game</a></li>
             </ul>
-          </li>
+          </li> -->
         </ul>
       </nav>
 
@@ -513,60 +546,87 @@
                         <input type="text" id="input2">
                         <span id="answer"></span>
                         <br>
-                        <button class="" onclick="return(add())">+</button>
-                        <button class="" onclick="minus()">-</button>
+                        <button class="plus" onclick="return(add())">+</button>
+                        <button class="sub" onclick="minus()">-</button>
                         <br>
-                        <button class="" onclick="dvd()">/</button>
-                        <button class="" onclick="times()">x</button>
+                        <button class="divide" onclick="dvd()">/</button>
+                        <button class="mul" onclick="times()">x</button>
 
                         <script>
+                            let a, b, c, d, k;
+
+                            function getAnswer(){
+                                if(a==""||b==" "){
+                                    d.innerHTML =" fill those fields"
+                                    d.style.fontSize =`25px`
+                                    d.style.color="red";
+                                }
+                                else if(isNaN(a) ||isNaN(b)){
+                                    d.innerHTML = "only number is allowed."
+                                    d.style.fontSize =`25px`
+                                    d.style.color="red";
+                                }
+                                else{
+                                    d.innerHTML = `= ${k}`;
+                                    d.style.fontSize =`25px`
+                                    d.style.color="cornflowerblue"
+                                    c.style.color= 'cornflowerblue'
+                                    c.style.fontSize =`28px`
+                                }
+                            }
+
+
+
+
                             function add(){
-                                let a= document.getElementById('input1').value;
-                                let b= document.getElementById('input2').value;
-                                a= +a;
-                                b= +b;
-                                let k= a+b;
-                                let c= document.getElementById('symbol').innerHTML='+';
-                    
-                                let d= document.getElementById('answer').innerHTML='='+k;
-                    
+                                a= Number(document.getElementById('input1').value);
+                                b= Number(document.getElementById('input2').value);
+                                c= document.getElementById('symbol');
+                                d= document.getElementById('answer');
+
+                                k= a+b;
+                                c.innerHTML='+';
+                                           
+                                d.innerHTML='='+k;
+                                
+                                getAnswer()
+                               
                             }
                     
                             function minus(){
-                                let e= document.getElementById('input1').value;
-                                let f= document.getElementById('input2').value;
-                                e= +e;
-                                f= +f;
-                                let l= e-f;
-                                let g= document.getElementById('symbol').innerHTML='-';
+                                
+                               k=a-b;
+                                c.innerHTML='-';
                     
-                                let h= document.getElementById('answer').innerHTML='='+l;
+                                d.innerHTML='='+k;
+                                getAnswer()
                     
                             }
                     
                             function dvd(){
-                                let i= document.getElementById('input1').value;
-                                let j= document.getElementById('input2').value;
-                                i= +i;
-                                j= +j;
-                                let m= i/j;
-                                let n= document.getElementById('symbol').innerHTML='/';
+                                k= a/b;
+                                c.innerHTML='/';
                     
-                                let o= document.getElementById('answer').innerHTML='='+m;
+                                d.innerHTML='='+k;
+                                getAnswer()
                     
                             }
                     
                             function times(){
-                                let p= document.getElementById('input1').value;
-                                let q= document.getElementById('input2').value;
-                                p= +p;
-                                q= +q;
-                                let r= p*q;
-                                let s= document.getElementById('symbol').innerHTML='x';
+                                k= a*b;
+                                c.innerHTML='x';
                     
-                                let t= document.getElementById('answer').innerHTML='='+r;
+                                d.innerHTML='='+k;
+                                getAnswer()
                     
                             }
+
+                            let btn1= document.querySelector('.plus');
+                            let btn2= document.querySelector('.sub');
+                            let btn3= document.querySelector('.divide');
+                            let btn4= document.querySelector('.mul');
+
+                            btn1 
                         </script>
                 </div>
             </div>
@@ -607,6 +667,7 @@
 
     <div class="container">
         <div class="row">
+            
             <div class="col sm-6 operator" id="scrollspyHeading4">
                 <h2>
         
@@ -638,11 +699,76 @@
                                         alert('you are wrong'); 
                               }
                             }
+                            
                                     
                 </script> 
+                
+        </div>
+    </div>
+
+    <div class="tropical">
+        <h1>Tropicana fruit juice</h1>
+    <p>No matter which great flavor you choose, you can count on a burst of brightness in every bottle.</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm my-2">
+                <img src="image/water.png" alt="#" width="120">
+                <br>
+                <span>Watermelon Juice</span>
+                <br>
+                <button  onclick="melonJuice()">See Recipe</button>
+            </div>
+            <div class="col-sm my-2">
+                <img src="image/orange.png  " alt="#" width="120">
+                <br>
+                <span>Orange Juice</span>
+                <br>
+                <button onclick="orangeJuice()">See Recipe</button>
+            </div>
+            <div class="col-sm my-2">
+                <img src="image/strawberry.png" alt="#" width="120">
+                <br>
+                <span>Strawberry Juice</span>
+                <br>
+                <button onclick="berryJuice()">See Recipe</button>
+            </div>
+            <div class="col-sm my-2">
+                <img src="image/mixed.pnggit.init" alt="#" width="120">
+                <br>
+                <span>Mixed Juice</span>
+                <br>
+                <button onclick="mixedJuice()">See Recipe</button>
             </div>
         </div>
     </div>
+
+    </div>
+
+    <script>
+        function tropicalFruit(watermelon, orange, strawberry,){
+            const juice= `Every glass is brimming with Vitamin C. A refreshing taste of pure sunshine. ${watermelon}% watermelon, ${orange}% orange, ${strawberry}% strawberry, 50% less sugar and 100% great taste. With such a wide variety of fresh flavors, our juices are made to give you a burst of brightness any time of day`; return juice;
+        }
+     function melonJuice(){
+        const melonFruit= tropicalFruit(99, 0, 0)
+        alert(melonFruit);
+     };
+     function orangeJuice(){
+        const orangeFruit= tropicalFruit(0, 99, 0)
+        alert(orangeFruit);
+     };
+     function berryJuice(){
+        const berryFruit= tropicalFruit(0, 0, 99)
+        alert(berryFruit);
+     };
+     function mixedJuice(){
+        const mixedFruit= tropicalFruit(33, 33, 33)
+        alert(mixedFruit);
+     };
+    </script>
+    
+
 </div>
+<a href="index.html" class="but" style="font-size: 40px;"> <i class="bi bi-arrow-up-short" ></i></a>
+
 </body>
 </html>
