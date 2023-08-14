@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            position: relative;
+        }
+        .list{
+            display: none;
+        }
+        .parent:hover .list{
+            display: block;
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <input type="text" placeholder="Amount to invest" id="invest">
+            </div>
+            <div class="col-3">
+                <div>
+                    <select>
+                        <option value="" class="" id="dure">Duration</option>
+                    <option class="opt" id="one" >1 Month</option>
+                    <option class="opt" id="two">2 Months</option>
+                    <option class="opt" id="three" value="">3 Months</option>
+                    <option class="opt" id="four" value="">4 Months</option>
+                </select>
+                </div>
+            </div>
+        <div style="text-align: center;">
+        <button value="submit" id="calculate">Calculate</button>
+        <span></span>
+    </div>    
+        </div>
+    </div>
+
+
+    <script>
+        // let a, b,c, d, k,p,e;
+        // function getAnswer(){
+        //     if(a =="" || a== isNaN ){
+        //         alert('invalid input')
+        //     }
+        //     else if(b == p){
+        //         alert('choose your duration')
+        //     }
+
+        // };
+        function two(){
+             let a=Number(document.getElementById('invest').value)
+            let b=Number(document.getElementById('one'))
+             let e=document.querySelector('span')
+            let p= document.getElementById('dure')
+            let c= a/100;
+            let d= c * 1;
+            let k=d+a;
+            // alert(k)
+            e.innerHTML= 'you will withdraw a total of'+k;
+            
+           
+
+
+        }
+        document.getElementById("calculate").onclick = function() {
+  two();
+};
+        
+
+
+
+
+    document.getElementById('cal').addEventListener('click',
+    function (){
+        let Investment = document.getElementById('input1').value;
+        let duration= document.getElementById('input2').value;
+        let profit= 0.1 * Investment;
+        let withdraw = Number(profit * duration) + Number(Investment);
+        document.getElementById('ans').innerHTML = `the amount you will withdraw for this ${duration} is ${withdraw}`
+    }
+    )
+    </script>
+
+    
+
+    
+</body>
+</html>

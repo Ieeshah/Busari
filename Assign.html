@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="greet1">
+        <div class="welcome">
+            <h1 id="greet">Welcome to my page visitor</h1>
+        </div>
+        <br><br>
+
+        <button onclick="page()">Greet</button>
+        <br><br>
+    </div>
+
+
+
+    <!-- <div>
+        <img class="simple" src="img/project.avif" width="100%" height="50%">
+        <div class="top">
+          <div style="text-align: center;">
+            <div class="task">
+              <h2 style="background: black; text-align: center; color: white;">Task 8</h2>
+            </div>
+            <h2 style=" color: black;">Today's Date and Time</h2><br>
+            <h1 onload="qeenah()" id="tunde">Get todays's date and time</h1>
+          </div> <br><br> <br>
+        </div>
+    </div> -->
+
+
+    <div>
+        
+    <div class="today">
+      <div>
+        <h2>Click below to check for today's date</h2>
+        <span id="datee"></span> <br><br>
+        <button onclick="dayy()"
+          >Click</button>
+      </div>
+    </div>
+
+
+
+
+    <div>
+        <div class="ment">
+          <div class="invest">
+            <h1>
+              Investment Calculator
+            </h1>
+          </div><br><br><br>
+          <div>
+            <input id="input5" value="" placeholder="How much will you like to Investment">
+            <select name="" id="input6">
+              <option value="1">1 year</option>
+              <option value="2">2 years</option>
+              <option value="3">3 years</option>
+              <option value="4">4 years</option>
+              <option value="5">5 years</option>
+              <option value="6">6 years</option>
+              <option value="7">7 years</option>
+              <option value="8">8 years</option>
+              <option value="9">9 years</option>
+              <option value="10">10 years</option>
+              <option value="11">11 years</option>
+              <option value="12">12 years</option>
+            </select>
+            <button id="calculate">Calculate</button>
+            <br><br>
+            <h3 id="result"></h3>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div>
+        
+        <div class="borrow">
+          <div class="loan">
+            <h2>
+              Loan Calculator
+            </h2>
+          </div>
+          <div>
+            <input id="input3" value="" placeholder="How much do you want to borrow">
+
+            <select name="" id="input4">
+              <option value="1">1 month</option>
+              <option value="2">2 months</option>
+              <option value="3">3 months</option>
+              <option value="4">4 months</option>
+              <option value="5">5 months</option>
+              <option value="6">6 months</option>
+              <option value="7">7 months</option>
+              <option value="8">8 months</option>
+              <option value="9">9 months</option>
+              <option value="10">10 months</option>
+              <option value="11">11 months</option>
+              <option value="12">12 months</option>
+            </select>
+            <button id="calc">Calculate</button>
+            
+            <h3 id="answ"></h3>
+          </div>
+        </div>
+      </div>
+
+
+      <div>
+        <div>
+            <h2>Prime</h2>
+            <button onclick="prime()">Click</button>
+        </div>
+      </div>
+
+
+    <script>
+        // Greeting
+        function page() {
+            let sayHi = document.querySelector('#greet').innerHTML;
+            let yourName = prompt("what is your name");
+            let greeting = sayHi.replace("visitor", yourName);
+            document.querySelector('#greet').innerHTML = greeting;
+
+        };
+
+        //get day
+        function dayy() {
+            let aDay = new Date().getDay();
+            let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+
+            if (aDay == 0) {
+                alert(`Today is ${days[aDay]} Go to Church`);
+            }
+            else if (aDay == 6) {
+                alert(`Today is ${days[aDay]} Time to party`);
+            }
+            else if (aDay == 5) {
+                alert(`Today is ${days[aDay]} Go to Mosque`);
+            }
+            else {
+                alert(`Today is ${days[aDay]} Go to work`);
+            }
+        }
+
+
+
+    //     function qeenah() {
+    //     let d = new Date()
+    //     let Months = [`january`, `feburary`, `march`, `april`, `may`, `june`, `july`, `august`, `september`, `october`,
+    //       `november`, `december`
+    //     ];
+    //     let ho = d.getHours();
+    //     let mi = d.getMinutes();
+    //     let sec = d.getSeconds();
+    //     let da = d.getDate();
+    //     if (ho < 10) {
+    //       ho = `0` + ho;
+    //     }
+    //     if (da < 10) {
+    //       da = `0` + da;
+    //     }
+    //     if (mi < 10) {
+    //       mi = `0` + mi;
+    //     }
+    //     if (sec < 10) {
+    //       sec = `0` + sec;
+    //     }
+    //     document.querySelector(`#tunde`).innerHTML = `${Months[d.getMonth()]} ${da}, ${ho} : ${mi} : ${sec}`
+    //   }
+    //   let kira = setInterval(qeenah, 1000)
+
+
+
+
+          // Investment calculator
+          document.getElementById('calculate').addEventListener('click',
+        function () {
+          let Investment = document.querySelector('#input5').value;
+          let duration = document.getElementById('input6').value;
+          let profit = 0.1 * Investment;
+          let withdraw = Number(profit * duration) + Number(Investment);
+          document.getElementById('result').innerHTML =
+            `You will withdraw ${withdraw} in ${duration} years`
+
+        }
+      );
+
+
+            // Loan Calculator
+            document.getElementById('calc').addEventListener('click',
+        function () {
+          let Loan = document.getElementById('input3').value;
+          let duration = document.getElementById('input4').value;
+          let Interest = 0.25 * Loan;
+          let totalpayable = Number(Loan) + Number(Interest);
+          let monthlyrepay = totalpayable / duration
+          let answer = document.getElementById('answ').innerHTML =
+            `${totalpayable} is total amount to return for ${duration} months and ${monthlyrepay} is amount to pay monthly`
+
+
+        }
+      );
+
+
+        function prime(){
+                 let a= prompt('enter any prime number')
+        if(a<1 || isNaN(a) || ! a){
+            console.log('Invalid Input');
+            
+        }
+        else if(a==2){
+                alert(`${a} is a prime number`);
+            }
+        else{
+            for(n=2; n<a; n++){
+            if(a%n==0){
+                alert(`${a} is not a prime number`)
+                break;
+            }
+        }     
+            if(n==a){
+                alert(`${a} is a prime number`);
+            }
+         
+        } 
+        }
+
+
+
+    </script>
+</body>
+
+</html>
