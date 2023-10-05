@@ -1,51 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> -->
-    
-    <!-- <style>
-        .container{
-            background-image: url(image/clock.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-            padding: 100px;
-        }
-        .fade{
-            background-color: white;
-            width: 380px;
-        }
-        .sender{
-            display: flex;
-            padding: 15px;
-            text-align: center;
-             border-bottom: 2px solid black;
-             background-color: ghostwhite;
-            
-        }
-        
-        .sender button{
-            font-size: 1.5rem;
-            background-color: transparent;
-            /* color: white; */
-            border: 0px solid white;
-            margin: auto;
-            /* border-left: 2px solid black; */
-            /* width: 100px; */
-            padding: 10px;
-            font-weight: 700;
-            margin-bottom: 1%;
-            color: purple;
-        }
-        .deliver{
-            padding: 5%;
-        }
-        .sender button:hover{
-            cursor: pointer;
-        }
-    </style> -->
     <style>
         /* .blink{
             animation: blinker 1.5s linear infinite;
@@ -62,20 +26,7 @@
             margin: 0%;
             padding: 0%;
             box-sizing: border-box;
-            scroll-behavior: smooth;
         }
-        .parent{
-            position: relative;
-        }
-        .lists{
-            display: none;
-            
-        }
-        
-        .nav{
-            display: flex;
-        }
-       
         .cal input {
             width: 4rem;
             height: 3rem;
@@ -103,8 +54,8 @@
         }
         .container{
             background-image: url(image/clock.png);
-        background-size: contain;
-        background-repeat: repeat;
+        background-size: cover;
+        background-repeat: no-repeat;
             padding: 100px;
         }
         .fade{
@@ -289,7 +240,7 @@
             border: 2px solid thistle;
             width: 250px;
             padding: 1rem;
-            /* background-color: thistle; */
+            background-color: thistle;
             
         }
         .hotel button{
@@ -365,8 +316,7 @@
 
         .history .row {
             display: grid;
-            grid-template-columns: 1fr 3fr;
-            /* gap: 5%; */
+            grid-template-columns: 1fr 7fr;
             /* gap: 0rem; */
         }
         .list{
@@ -395,10 +345,10 @@
         .history .col {
             /* padding: 28px; */
             padding-bottom: 60px;
-            width: auto;
+            /* width: 200px; */
             /* position: static;  */
             /* left: 2; */
-            background-color: #95D8F2;
+            background-color: azure;
 
         }
         .history img{
@@ -410,23 +360,11 @@
         }
         .history .cols {
             /* margin-left: 200px; */
-            width: 70vw;
-            margin: auto;
+            width: 29rem;
             height: 30rem;
             overflow: auto;
-            font-size: 130%;
-            padding: 2%;
-            /* color: #F3F3F5; */
             /* overflow-x: ; */
             
-        }
-        .cols p{
-            /* width: 40rem; */
-            margin: auto;
-            /* height: 30rem; */
-            /* overflow: auto; */
-            font-size: 100%;
-            /* padding: 2%; */
         }
 
         /* .party, .variables, .keywords, .operator{
@@ -435,19 +373,19 @@
         .history .over{
             
             /* width: 2000px; */
-
             display: flex;
-            overflow-x: scroll;
+            overflow-x: hidden;
             scroll-behavior: smooth;
-            background-color: #F3F3F5;
+            background-color: rgb(223, 248, 248);
             
         }
-        /* .history .flex{
-            width: 100%;
-            font-size: 150%;
-            padding: 10%;
+        .history .flex{
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 1rem;
+            width: 60rem;
            
-        } */
+        }
 
         /* add */
 
@@ -478,25 +416,20 @@
             color: blueviolet;
          }
          .calculator{
-            background-color: #F3F3F5;
+            background-image: url(image/calculate.jpeg);
+            background-size: 70%;
          }
          .list{
-            /* background-color: #C1CBD0; */
-         }
-         .row-2{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            background-color: #95D8F2;
+            background-color: burlywood;
          }
          
 
          .guess {
         text-align: center;
         padding: auto;
-        background-color: #F3F3F5;
-        /* background-image: url(image/brick.png);
+        background-image: url(image/brick.png);
         background-size: cover;
-        background-repeat: no-repeat; */
+        background-repeat: no-repeat;
         
       }
       .guess input{
@@ -519,69 +452,17 @@
         font-size: 2rem;
       }
       .guess button{
-        background-color: #F3F3F5;
+        background-color: black;
             color: rebeccapurple;
             border: 1px rebeccapurple solid;
             /* margin: 3%; */
-            padding: 8px;
             font-size: 22px;
             cursor: pointer;
             
             border-radius: 10px;
       }
-      .footer a{
-        color: #F3F3F5;
-        text-decoration: none;
-      }
-      .footer ul{
-        color: #95D8F2;
-        
-      }
-      .footer li{
-        list-style-type: none;
-      }
-      .nav span{
-        display: none;
-      }
-      .nav{
-        background-color: #F3F3F5;
-      }
-      #bar{
-                display: flex;
-                /* position: absolute; */
-                /* padding-left:    1%; */
-                
-            }
-            #bar div{
-margin-left: 1%;
-            }
-            #bar h4{
-                width: 100%;
-                font-size: 100%;
-                color: #95D8F2;
-            }
-            @media screen and (max-width :990px) {
-                .nav span{
-                display: inline;
-            }
-            #bar{
-                display: none;
-                position: absolute;
-                background-color: white;
-            }
-            }
          @media screen and (max-width :728px) {
-            .nav span{
-                display: inline;
-                flex-direction: right !important;
-                /* position: sticky;
-                top: 2%; */
-            }
-            #bar{
-                display: none;
-                position: absolute;
-                background-color: white;
-            }
+            
             .row{
                 display: block;
             }
@@ -591,8 +472,6 @@ margin-left: 1%;
             
             .history .col{
                 display: flex;
-                width: auto !important;
-                overflow: auto;
 
             }
            
@@ -604,11 +483,10 @@ margin-left: 1%;
             
         } */
         .history .cols {
-            width: 90vw;
-            /* color: red; */
+            width: 25rem;
             height: 30rem;
             overflow: scroll;
-            /* background-image: url(image/jss.png); */
+            background-image: url(image/jss.png);
             background-repeat: no-repeat;
             background-size: contain;
             
@@ -617,9 +495,8 @@ margin-left: 1%;
         .history .over{
             display: flex;
             padding-left: 5%;
-            /* width: 150% !important; */
-            /* overflow-x: scroll;
-            scroll-behavior: smooth; */
+            overflow-x: scroll;
+            scroll-behavior: smooth;
             
         }
         .full{
@@ -627,13 +504,11 @@ margin-left: 1%;
         } 
         .history .flex{
              display: inline;
-             /* width: auto !important; */
            
         }
         .history .col button {
             display: flex;
             margin: 1px;
-            
             border-radius: 10px;
             border: 1px #71A0EC solid;
             background-color: #00031F;
@@ -642,15 +517,11 @@ margin-left: 1%;
             cursor: pointer;
         }
         .history .flet{
-            display: inline;
-           
-            overflow: scroll;
+            display: flex;
+            overflow-y: scroll;
         }
         .history .swit{
             display: none;
-        }
-        .party{
-            width: 100% !important;
         }
         .cols .flex{
             display: inline;
@@ -659,12 +530,12 @@ margin-left: 1%;
             /* background-Image: url(image/lator.jpeg); */
             background-repeat: no-repeat;
             background-size: contain;
-            padding: 30px;  
+            /* padding: 30px;   */
             display: flexbox;
         }
         .fade{
             background-color: gray;
-            width: auto;
+            width: 350px;
         }
         .sender{
             display: flex;
@@ -676,7 +547,7 @@ margin-left: 1%;
         }
         
         .sender button{
-            font-size: 150%;
+            font-size: 1.5rem;
             background-color: transparent;
             border: 0px solid white;
             margin: auto;
@@ -739,23 +610,18 @@ margin-left: 1%;
             
             border-radius: 10px;
       }
-      .row-2{
-            display: block;
-         }
 
             
          }
 
          @media screen and (max-width :300px) {
             .history .cols {
-            width: 90vw;
-            /* color: green; */
+            width: 13rem;
             height: 30rem;
-            /* margin: 12%; */
             overflow: scroll;
-            /* background-image: url(image/jss.png); */
-            /* background-repeat: no-repeat;
-            background-size: contain; */
+            background-image: url(image/jss.png);
+            background-repeat: no-repeat;
+            background-size: contain;
             
             
         }
@@ -820,8 +686,8 @@ margin-left: 1%;
             color: blueviolet;
          }
          .list{
-            /* background-color: teal;
-            width: 200px; */
+            background-color: teal;
+            width: 200px;
          }
          .hotel input{
             width: 8rem;
@@ -862,259 +728,193 @@ margin-left: 1%;
         }
          }
     </style>
+
+
 </head>
 <body>
-    <div class="nav">
-        <div><span onclick="log()" ><i class="bi bi-arrow-up-short"></i> heyyyy</span></div>
-        
-        <br>
-        <div id="bar">
-            <div><h4 onclick="javahy()">Javascript</h4></div>
-            <div><h4 onclick="varihy()">Variables</h4></div>
-            <div><h4 onclick="keyhy()">Keywords</h4></div>
-            <div><h4 onclick="operhy()">Operators</h4></div>
-            <div><h4 onclick="calcu()">Prime Number</h4></div>
-            <div><h4 onclick="jane()">Days Task</h4></div>
-            <div><h4 onclick="simp()">Simple Calculator</h4></div>
-            <div><h4 onclick="inves()">Investment Calculator</h4></div>
-            <div><h4 onclick="loane()">Loan Calculator</h4></div>
-            <div><h4 onclick="thy()">Digital Time</h4></div>
-            <div><h4 onclick="hot()">Hotel Booking</h4></div>
-            <div><h4 onclick="time()">Uber</h4></div>
-            <div><h4 onclick="todo()">To do list</h4></div>
-            <div><h4 onclick="guess()">Guess my number game</h4></div>
-            
-        </div>
-        
-    </div>
-    
-    <script>
-        
-        function simp(){
-                window.location.href = '#scrollone';
-                
-            }
-            function guess(){
-                window.location.href = '#guesser';
-                
-            }
-            function inves(){
-                window.location.href = '#scrolltwo';
-                
-            }
-            function loane(){
-                window.location.href = '#scrollthree';
-                
-            }
-            function thy(){
-                window.location.href = '#tunde';
-                
-            }
-            function hot(){
-                window.location.href = '#scrollfour';
-                
-            }
-            function todo(){
-                window.location.href = '#scrollfive';
-                
-            } 
-             function log(){
-                document.getElementById('bar').style.display='block';
-            }
-            function javahy(){
-                window.location.href = '#jav';
-                
-            }
-            function varihy(){
-                window.location.href = '#var';
-            }
-            function keyhy(){
-                window.location.href = '#kew';
-            }
-            function operhy(){
-                window.location.href = '#ope';
-            }
-    </script>
-    </div>
-    <div>
-        <div class="container"> 
-            <div class="busari">
-                  <h1 onload="busari()" id="tunde" style="font-weight: 700; font-size: 40px;"></h1>
-              </div>
-            <h1 id="intro" style="text-align: center; font-weight: 600; font-size: 40px;"> Busari Aishat <br> Javascript Project</h1>
-            <div class="fade">
-               
-                <div class="sender">
-                    <div>
-                     <button id="javab" onclick="jane()">Day Task</button>   
-                    </div>
-                    <div>
-                       <button onclick="calcu()">Prime</button> 
-                    </div>
-                    <div>
-                       <button onclick="time()">Uber ride</button> 
-                    </div>
-                    
+
+    <nav>
+
+    </nav>
+
+     <div class="container"> 
+        <div class="busari">
+              <h1 onload="busari()" id="tunde" style="font-weight: 700; font-size: 40px;"> </h1>
+          </div>
+        <h1 id="intro" style="text-align: center; font-weight: 600; font-size: 40px;"> Busari Aishat <br> Javascript Project</h1>
+        <div class="fade">
+           
+            <div class="sender">
+                <div>
+                 <button id="javab" onclick="jane()">Day Task</button>   
                 </div>
-                <div class="deliver">
-                    <div class="Java Deliver" id="jaded">
-                        <div class="today">
-                                <div>
-                                    <h2>Click below to check for today's date</h2>
-                                    <span id="datee"></span> 
-                                    <div id="dayy">
-                                        <button onclick="dayy()">Click</button>
-                                    </div>
+                <div>
+                   <button onclick="calcu()">Prime</button> 
+                </div>
+                <div>
+                   <button onclick="time()">Uber ride</button> 
+                </div>
+                
+            </div>
+            <div class="deliver">
+                <div class="Java Deliver" id="jaded">
+                    <div class="today">
+                            <div>
+                                <h2>Click below to check for today's date</h2>
+                                <span id="datee"></span> 
+                                <div id="dayy">
+                                    <button onclick="dayy()">Click</button>
                                 </div>
                             </div>
-                       
-                    </div>
-                    <div class="caldeliver" id="cald" style="display: none; width: 300px;">
-    
-                        <div>
-                            <h1 class="primee">
-                                Prime Number
-                            </h1>
-                            <div id="prime">
-                                <button onclick="myPrime()">Click</button>
-                            </div>
                         </div>
+                   
+                </div>
+                <div class="caldeliver" id="cald" style="display: none; width: 300px;">
+
+                    <div>
+                        <h1 class="primee">
+                            Prime Number
+                        </h1>
+                        <div id="prime">
+                            <button onclick="myPrime()">Click</button>
+                        </div>
+                    </div>
+                        
+                </div>
+                <div id="dripo" style="display: none;">
+                    <div id="drip">
+                        <div id="place">
+                            <input type="text" placeholder="Pick up point" id="fro" required onkeyup="valid()">
+                            <br>
+                            <input type="text" placeholder="Your Destination" id="to" required onkeyup="valid()">
+                            <span id="greek"></span>
+                        </div>
+                        <div id="counterr" style="display: none;" class="stopwatch">
+                            <span id="how">
+                                00
+                            </span>
+                            <span id="colm">
+                                :
+                            </span>
+                            <span id="min">
+                                00
+                            </span>
+                            <span id="colm">
+                                :
+                            </span>
+                            <span id="sec">
+                                00
+                            </span>
+                            <br>
                             
+                        </div>
+                        <div>
+                            <h4 id="note" style="display: none; margin-top: 20px;">Your trip has ended. Click button to generate receipt</h4>
+                        </div>
+                        <div class="btn">
+                            <button id="start">Start Trip</button>
+                            <button id="stop" style="display: none;">Generate Receipt</button>
+                            <button id="pause" style="display: none;">Stop Ride</button>
+                        </div>
                     </div>
-                    <div id="dripo" style="display: none;">
-                        <div id="drip">
-                            <div id="place">
-                                <input type="text" placeholder="Pick up point" id="fro" required onkeyup="valid()">
-                                <br>
-                                <input type="text" placeholder="Your Destination" id="to" required onkeyup="valid()">
-                                <span id="greek"></span>
-                            </div>
-                            <div id="counterr" style="display: none;" class="stopwatch">
-                                <span id="how">
-                                    00
-                                </span>
-                                <span id="colm">
-                                    :
-                                </span>
-                                <span id="min">
-                                    00
-                                </span>
-                                <span id="colm">
-                                    :
-                                </span>
-                                <span id="sec">
-                                    00
-                                </span>
-                                <br>
+                    <div style="display: none;" id="receipt">
+                        <table>
+                            <thead>
                                 
-                            </div>
-                            <div>
-                                <h4 id="note" style="display: none; margin-top: 20px;">Your trip has ended. Click button to generate receipt</h4>
-                            </div>
-                            <div class="btn">
-                                <button id="start">Start Trip</button>
-                                <button id="stop" style="display: none;">Generate Receipt</button>
-                                <button id="pause" style="display: none;">Stop Ride</button>
-                            </div>
-                        </div>
-                        <div style="display: none;" id="receipt">
-                            <table>
-                                <thead>
+                                <tr><th>Receipt</th></tr>
+                                <tr>
                                     
-                                    <tr><th>Receipt</th></tr>
-                                    <tr>
-                                        
-                                        <td>
-                                            Date
-                                        </td>
-                                        <th id="taxe"></th>
-                    
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Distance
-                                        </td>
-                                        <td id="froto"></td>
-                    
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                           Time Used
-                                        </td>
-                                        <td id="tym"></td>
-                    
-                                    </tr>
-                                    <tr>
-                                        <td>Base fare</td>
-                                        <td>800</td>
-                    
-                                    </tr>
-                                    <tr>
-                                        <td>Duration fare</td>
-                                        <td id="dura"></td>
-                    
-                                    </tr>
-                                    <tr>
-                                        <td>Total</td>
-                                        <td id="Tota"></td>
-                    
-                                    </tr>
-                                    <tr>
-                                        <td>Amount to Pay</td>
-                                        <td id="amt"></td>
-                    
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
+                                    <td>
+                                        Date
+                                    </td>
+                                    <th id="taxe"></th>
+                
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Distance
+                                    </td>
+                                    <td id="froto"></td>
+                
+                                </tr>
+                                <tr>
+                                    <td>
+                                       Time Used
+                                    </td>
+                                    <td id="tym"></td>
+                
+                                </tr>
+                                <tr>
+                                    <td>Base fare</td>
+                                    <td>800</td>
+                
+                                </tr>
+                                <tr>
+                                    <td>Duration fare</td>
+                                    <td id="dura"></td>
+                
+                                </tr>
+                                <tr>
+                                    <td>Total</td>
+                                    <td id="Tota"></td>
+                
+                                </tr>
+                                <tr>
+                                    <td>Amount to Pay</td>
+                                    <td id="amt"></td>
+                
+                                </tr>
+                            </thead>
+                        </table>
                     </div>
                 </div>
             </div>
-            <script>
-                // let scriptB = document.getElementById('javab');
-                    let scriptD = document.getElementById('jaded');
-                    let CalcD = document.getElementById('cald');
-                    let TimeD = document.getElementById('dripo');
-                    let parent = document.querySelector('.container');
-                    // document.getElementById('gen').innerHTML='';
-    
-                function jane(){
-                        parent.style.backgroundImage='url(image/clock.png)';
-                        // c.style.backgroundImage='url(image/man.jpg)';
-                        CalcD. style.display='none';
-                        TimeD.style.display='none';
-                        scriptD.style.display='inline';
-                        // scriptD.style.scrollBehavior='slide';
-                        // scriptD.style.width='300px'
-                        parent.style.backgroundRepeat='repeat';
-                    parent.style.backgroundSize='contain';
-                    document.getElementById('tunde').style.color='black';
-                    document.getElementById('intro').style.color='black';
-                }
-                function calcu(){
-                    CalcD. style.display='inline';
-                    TimeD.style.display='none';
-                    scriptD.style.display='none';
-                    parent.style.backgroundImage='url(image/Prime.jpg)';
-                    parent.style.backgroundRepeat='repeat';
-                    parent.style.backgroundSize='cover';
-                    document.getElementById('tunde').style.color='black';
-                    document.getElementById('intro').style.color='black';
-            }
-            function time(){
-                parent.style.backgroundImage='url(image/rid.jpeg)';
-                    CalcD. style.display='none';
-                    TimeD.style.display='inline';
-                    scriptD.style.display='none';
-                    parent.style.backgroundRepeat='repeat';
-                    parent.style.backgroundSize='contain';
-                    document.getElementById('tunde').style.color='white';
-                    document.getElementById('intro').style.color='white';
-            }
-            </script>
         </div>
+        <script>
+            // let scriptB = document.getElementById('javab');
+                let scriptD = document.getElementById('jaded');
+                let CalcD = document.getElementById('cald');
+                let TimeD = document.getElementById('dripo');
+                let parent = document.querySelector('.container');
+                // document.getElementById('gen').innerHTML='';
+
+            function jane(){
+                    parent.style.backgroundImage='url(image/clock.png)';
+                    // c.style.backgroundImage='url(image/man.jpg)';
+                    CalcD. style.display='none';
+                    TimeD.style.display='none';
+                    scriptD.style.display='inline';
+                    // scriptD.style.scrollBehavior='slide';
+                    // scriptD.style.width='300px'
+                    parent.style.backgroundRepeat='repeat';
+                parent.style.backgroundSize='contain';
+                document.getElementById('tunde').style.color='black';
+                document.getElementById('intro').style.color='black';
+            }
+            function calcu(){
+                CalcD. style.display='inline';
+                TimeD.style.display='none';
+                scriptD.style.display='none';
+                parent.style.backgroundImage='url(image/Prime.jpg)';
+                parent.style.backgroundRepeat='repeat';
+                parent.style.backgroundSize='cover';
+                document.getElementById('tunde').style.color='black';
+                document.getElementById('intro').style.color='black';
+        }
+        function time(){
+            parent.style.backgroundImage='url(image/rid.jpeg)';
+                CalcD. style.display='none';
+                TimeD.style.display='inline';
+                scriptD.style.display='none';
+                parent.style.backgroundRepeat='repeat';
+                parent.style.backgroundSize='contain';
+                document.getElementById('tunde').style.color='white';
+                document.getElementById('intro').style.color='white';
+        }
+        </script>
     </div>
-    <div class="history">
+
+     <div class="history">
         
         <div class="row">
             <div class="col">
@@ -1138,6 +938,10 @@ margin-left: 1%;
                 
                 <div class="party" id="jav">
                     <div class="flex">
+                        <div>
+                            <img class='full' src="image/jav.jpeg" alt="">
+                        </div>
+
                         <div class="cols">
                             <div class="java">
                                 <h1>Javascript</h1>
@@ -1323,6 +1127,8 @@ margin-left: 1%;
                 </div>
                 <div class="variables" id="var">
                     <div class="flex">
+                        <div class='full'><img src="image/variables.png" alt=""></div>
+
                         <div class="cols">
                             <div class="var">
                                 <h1>Variables</h1>
@@ -1388,6 +1194,8 @@ margin-left: 1%;
                 </div>
                 <div class="keywords" id="kew">
                     <div class="flex">
+                        <div><img class='full' src="image/keywords.jpeg" alt=""></div>
+
                         <div class="cols">
                             <div class="script key">
                                 <h1>Reserved keywords in JavaScript</h1>
@@ -1428,6 +1236,8 @@ margin-left: 1%;
                 <div class="operator" id="ope">
 
                     <div class="flex">
+                        <div><img class='full' src="image/oper.jpeg" alt=""></div>
+
                         <div class="cols">
                             <div class="operator" id="scrollspyHeading4">
                                 <h2>
@@ -1453,7 +1263,8 @@ margin-left: 1%;
         <script>
             function java(){
                 window.location.href = '#jav';
-                }
+                
+            }
             function vari(){
                 window.location.href = '#var';
             }
@@ -1465,11 +1276,11 @@ margin-left: 1%;
             }
         </script>
     </div>
-    <div class="calculator">
+     <div class="calculator">
         <div class="row">
             <div class="" style="margin: 5%;">
                 <div>
-                    <div class="col sm-6" id="scrollone">
+                    <div class="col sm-6" id="scrollspyHeading7">
                         <div class="cal">
                             <h3>
                                 Simple Calculator
@@ -1575,7 +1386,7 @@ margin-left: 1%;
 
         <div class="unmark" >
             <div style="margin-top: 10%;">
-                <div id="scrolltwo">
+                <div class=''>
                     <div>
                         <div class="ment"> 
                             <div class="invest">
@@ -1624,7 +1435,7 @@ margin-left: 1%;
                         );
                     </script>
                 </div>
-                <div id="scrollthree">
+                <div class="">
                     <div>
 
                         <div class="borrow">
@@ -1679,9 +1490,11 @@ margin-left: 1%;
         </div>
     </div>
     </div>
-    <div>
-        <div class="row-2">
-            <div class="hotel" id="scrollfour">
+
+
+     <div>
+        <div class="row">
+            <div class="hotel">
                 <div>
                     <h2>Hotel Booking</h2>
                     <input type="number" id="days">
@@ -1719,7 +1532,7 @@ margin-left: 1%;
         
             </script>
 
-    <div class="list" id="scrollfive">
+    <div class="list">
         <div>
             
             <input type="text" id="add" placeholder="input a task" class="tex">
@@ -1852,12 +1665,13 @@ margin-left: 1%;
              const cnt = new Date().getTime() + (numberDayst * 60 * 1000);
             st= setInterval(function () {
             let nowT = new Date().getTime();
-            let distance = cnt - nowT;
+            let distancet = cnt - nowT;
         
-            let minute = Math.floor(distance % (60 * 60 * 1000) / (60 * 1000));
-            let second = Math.floor(distance % (60 * 1000) / (1000));
-            thym.innerHTML = `${minute}: ${second}`;
-            if (distance <= 0) {
+            let minute
+            st = Math.floor(distancet % (60 * 60 * 1000) / (60 * 1000));
+            let secondst = Math.floor(distancet % (60 * 1000) / (1000));
+            thym.innerHTML = `${minutest}: ${secondst}`;
+            if (distancet <= 0) {
                 clearInterval(st);
                 thym.innerHTML = 'Expired';}
         }, 1000);
@@ -1889,7 +1703,8 @@ margin-left: 1%;
     </div>
         </div>
     </div> 
-    <div id="guesser">
+
+     <!-- <div>
         <div class="guess">
       <h2>Guess my number game</h2>
       <h3 class="aisha">
@@ -1987,219 +1802,217 @@ margin-left: 1%;
   
        
       </script>
-    </div>
-    <div class="footer">
+    </div> -->
+     <div class="footer">
         <div class="row-3">
             <div>
                 <ul>Javascript</ul>
             </div>
             <div>
                 <ul>8 pages</ul>
-                <li><a href="https://ieeshah.github.io/index/index.html">Meta</a></li>
-                <li><a href="https://ieeshah.github.io/index/mongodb.html">Mongodb</a></li>
-                <li><a href="https://ieeshah.github.io/index/asana.html">Asana</a></li>
-                <li><a href="https://ieeshah.github.io/index/salesforce.html">Salesforce</a></li>
-                <li><a href="https://ieeshah.github.io/index/Oyo.html">Oyo</a></li>
-                <li><a href="https://ieeshah.github.io/index/Netflix.html">Netflix</a></li>
-                <li><a href="https://ieeshah.github.io/index/Uber.html">Uber</a></li>
-                <li><a href="https://ieeshah.github.io/index/Zoom.html">Zoom</a></li>
+                <li><a href=""></a>Meta</li>
+                <li><a href="">Mongodb</a></li>
+                <li><a href="">Asana</a></li>
+                <li><a href="">Salesforce</a></li>
+                <li><a href="">Oyo</a></li>
+                <li><a href="">Netflix</a></li>
+                <li><a href="">Uber</a></li>
+                <li><a href="">Zoom</a></li>
             </div>
             <div>
                 <ul>React</ul>
                 <li><a href="">Portfolio</a></li>
             </div>
         </div>
-    </div>
-
-
-    <script>
+    </div> 
+     <script>
         
-        // greet      
+                  // greet      
 
 
-        let rake = new Date().getHours();
-                  if (rake > 0 && rake < 11) {
-                      alert('Good Morning')
-                  }
-                  else if (rake > 11 && rake < 17) {
-                      alert("Good Afternoon")
-                  }
-                  else {
-                      alert("Good Evening")
-                  };
-              
-// Digital Time
-function busari() {
-let d = new Date();
-let ho = d.getHours();
-let mi = d.getMinutes();
-let sec = d.getSeconds();
-let da = d.getDate();
-if (ho < 10) {
-ho = `0` + ho;
-}
-if (mi < 10) {
-mi = `0` + mi;
-}
-if (sec < 10) {
-sec = `0` + sec;
-}
-document.querySelector(`#tunde`).innerHTML = `${ho} : ${mi} : ${sec}`
-}
-let jean = setInterval(busari, 1000)
-//get day
-function dayy() {
-                  let aDay = new Date().getDay();
-                  let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+                  let rake = new Date().getHours();
+                            if (rake > 0 && rake < 11) {
+                                alert('Good Morning')
+                            }
+                            else if (rake > 11 && rake < 17) {
+                                alert("Good Afternoon")
+                            }
+                            else {
+                                alert("Good Evening")
+                            };
+                        
+        // Digital Time
+        function busari() {
+        let d = new Date();
+        let ho = d.getHours();
+        let mi = d.getMinutes();
+        let sec = d.getSeconds();
+        let da = d.getDate();
+        if (ho < 10) {
+          ho = `0` + ho;
+        }
+        if (mi < 10) {
+          mi = `0` + mi;
+        }
+        if (sec < 10) {
+          sec = `0` + sec;
+        }
+        document.querySelector(`#tunde`).innerHTML = `${ho} : ${mi} : ${sec}`
+      }
+      let jean = setInterval(busari, 1000)
+    //get day
+    function dayy() {
+                            let aDay = new Date().getDay();
+                            let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
-                  if (aDay == 0) {
-                      alert(`Today is ${days[aDay]} Go to Church`);
-                  }
-                  else if (aDay == 6) {
-                      alert(`Today is ${days[aDay]} Time to party`);
-                  }
-                  else if (aDay == 5) {
-                      alert(`Today is ${days[aDay]} Go to Mosque`);
-                  }
-                  else {
-                      alert(`Today is ${days[aDay]} Go to work`);
-                  }
-              }
+                            if (aDay == 0) {
+                                alert(`Today is ${days[aDay]} Go to Church`);
+                            }
+                            else if (aDay == 6) {
+                                alert(`Today is ${days[aDay]} Time to party`);
+                            }
+                            else if (aDay == 5) {
+                                alert(`Today is ${days[aDay]} Go to Mosque`);
+                            }
+                            else {
+                                alert(`Today is ${days[aDay]} Go to work`);
+                            }
+                        }
 
-              // greet us
-              function greet() {
-
-
-let a = new Date().getHours();
-if (a > 0 && a < 11) {
-alert('Good Morning')
-}
-else if (a > 11 && a < 17) {
-alert("Good Afternoon")
-}
-else {
-alert("Good Evening")
-};
-}
-
-// Prime Number
-function myPrime() {
-                  let a = prompt('enter any prime number')
-                  if (a < 1 || isNaN(a) || !a) {
-                      console.log('Invalid Input');
-
-                  }
-                  else if (a == 2) {
-                      alert(`${a} is a prime number`);
-                  }
-                  else {
-                      for (n = 2; n < a; n++) {
-                          if (a % n == 0) {
-                              alert(`${a} is not a prime number`)
-                              break;
-                          }
-                      }
-                      if (n == a) {
-                          alert(`${a} is a prime number`);
-                      }
-
-                  }
-              }
-//   Uber Ride
-
-let from = document.getElementById('fro');
-let dest = document.getElementById('to');
-let hou = document.getElementById('how');
-let min = document.getElementById('min');
-let sec = document.getElementById('sec');
-let start = document.getElementById('start');
-let quit = document.getElementById('stop');
-let pause = document.getElementById('pause');
-let go = document.getElementById('froto');
-let duration = document.getElementById('dura');
-let total = document.getElementById('Tota');
-let tax = document.getElementById('taxe');
-let amount = document.getElementById('amt');
-let counter = document.getElementById('counterr');
-let receipts = document.getElementById('receipt');
-let span1 = document.getElementById('greek');
-let timeUsed = document.getElementById('tym');
-
-
-
-
-
-let efg = 0;
-let g;
-
-function engine() {
-++efg;
-let hh = parseInt((efg/ 60)/ 60);
-let mm = parseInt(efg / 60);
-let ss = efg % 60;
-
-
-hh = (hh < 10) ? '0' + hh : hh;
-mm = (mm < 10) ? '0' + mm : mm;
-ss = (ss < 10) ? '0' + ss : ss;
-
-hou.innerHTML = hh;
-min.innerHTML = mm;
-sec.innerHTML = ss;
-};
-function count() {
-g = setInterval(engine, 1000);
+                        // greet us
+                        function greet() {
+    
+    
+    let a = new Date().getHours();
+    if (a > 0 && a < 11) {
+        alert('Good Morning')
+    }
+    else if (a > 11 && a < 17) {
+        alert("Good Afternoon")
+    }
+    else {
+        alert("Good Evening")
+    };
 }
 
+ // Prime Number
+ function myPrime() {
+                            let a = prompt('enter any prime number')
+                            if (a < 1 || isNaN(a) || !a) {
+                                console.log('Invalid Input');
 
-function startengine() {
-count();
+                            }
+                            else if (a == 2) {
+                                alert(`${a} is a prime number`);
+                            }
+                            else {
+                                for (n = 2; n < a; n++) {
+                                    if (a % n == 0) {
+                                        alert(`${a} is not a prime number`)
+                                        break;
+                                    }
+                                }
+                                if (n == a) {
+                                    alert(`${a} is a prime number`);
+                                }
 
-start.style.display = 'none';
-quit.style.display='none';
-pause.style.display = 'inline';
-counter.style.display = 'inline';
-document.getElementById('place').style.display='none';
+                            }
+                        }
+    //   Uber Ride
 
-
-}
-function pauseengine (){
-clearInterval(g);
-start.style.display = 'none';
-pause.style.display='none';
-quit.style.display = 'inline';
-document.getElementById('note').style.display='inline';
-efg = 0;
-}
-quitengine = function () {
-clearInterval(g);
-start.style.display = 'inline';
-quit.style.display = 'none';
-document.getElementById('drip').style.display='none';
-document.getElementById('note').style.display='none';
-efg = 0;
-//   document.getElementById('min').innerHTML='00';
-//   document.getElementById('sec').innerHTML='00';
-receipts.style.display = 'inline';
-let date= new Date().toLocaleDateString();
-let blue = (50 * min.innerHTML) + Math.floor((sec.innerHTML / 60) * 50);
-timeUsed.innerHTML= (min.innerHTML) + ':' + (sec.innerHTML);
-duration.innerHTML = blue;
-total.innerHTML = 800 + blue;
-amount.innerHTML = (800+blue)* 1.01;
-console.log(amount)
-tax.innerHTML= date;
-froto.innerHTML=`From ${from.value} to ${dest.value}.`
-
-
-
-}
-start.addEventListener('click', startengine);
-quit.addEventListener('click', quitengine);
-pause.addEventListener('click', pauseengine);
+    let from = document.getElementById('fro');
+    let dest = document.getElementById('to');
+    let hou = document.getElementById('how');
+    let min = document.getElementById('min');
+    let sec = document.getElementById('sec');
+    let start = document.getElementById('start');
+    let quit = document.getElementById('stop');
+    let pause = document.getElementById('pause');
+    let go = document.getElementById('froto');
+    let duration = document.getElementById('dura');
+    let total = document.getElementById('Tota');
+    let tax = document.getElementById('taxe');
+    let amount = document.getElementById('amt');
+    let counter = document.getElementById('counterr');
+    let receipts = document.getElementById('receipt');
+    let span1 = document.getElementById('greek');
+    let timeUsed = document.getElementById('tym');
 
 
+    
 
-</script>
+
+    let efg = 0;
+    let g;
+
+    function engine() {
+        ++efg;
+        let hh = parseInt((efg/ 60)/ 60);
+        let mm = parseInt(efg / 60);
+        let ss = efg % 60;
+
+
+        hh = (hh < 10) ? '0' + hh : hh;
+        mm = (mm < 10) ? '0' + mm : mm;
+        ss = (ss < 10) ? '0' + ss : ss;
+
+        hou.innerHTML = hh;
+        min.innerHTML = mm;
+        sec.innerHTML = ss;
+    };
+    function count() {
+        g = setInterval(engine, 1000);
+    }
+   
+   
+    function startengine() {
+        count();
+     
+        start.style.display = 'none';
+        quit.style.display='none';
+        pause.style.display = 'inline';
+        counter.style.display = 'inline';
+        document.getElementById('place').style.display='none';
+        
+        
+    }
+    function pauseengine (){
+        clearInterval(g);
+        start.style.display = 'none';
+        pause.style.display='none';
+        quit.style.display = 'inline';
+        document.getElementById('note').style.display='inline';
+        efg = 0;
+    }
+    quitengine = function () {
+        clearInterval(g);
+        start.style.display = 'inline';
+        quit.style.display = 'none';
+        document.getElementById('drip').style.display='none';
+        document.getElementById('note').style.display='none';
+        efg = 0;
+        //   document.getElementById('min').innerHTML='00';
+        //   document.getElementById('sec').innerHTML='00';
+        receipts.style.display = 'inline';
+        let date= new Date().toLocaleDateString();
+        let blue = (50 * min.innerHTML) + Math.floor((sec.innerHTML / 60) * 50);
+        timeUsed.innerHTML= (min.innerHTML) + ':' + (sec.innerHTML);
+        duration.innerHTML = blue;
+        total.innerHTML = 800 + blue;
+        amount.innerHTML = (800+blue)* 1.01;
+        console.log(amount)
+        tax.innerHTML= date;
+        froto.innerHTML=`From ${from.value} to ${dest.value}.`
+
+
+
+    }
+    start.addEventListener('click', startengine);
+    quit.addEventListener('click', quitengine);
+    pause.addEventListener('click', pauseengine);
+
+
+
+</script> 
 </body>
 </html>

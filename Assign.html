@@ -22,18 +22,14 @@
 
 
 
-    <!-- <div>
-        <img class="simple" src="img/project.avif" width="100%" height="50%">
-        <div class="top">
+    <div>
+        <div class="busari">
           <div style="text-align: center;">
-            <div class="task">
-              <h2 style="background: black; text-align: center; color: white;">Task 8</h2>
-            </div>
-            <h2 style=" color: black;">Today's Date and Time</h2><br>
-            <h1 onload="qeenah()" id="tunde">Get todays's date and time</h1>
-          </div> <br><br> <br>
+            <h2 >Today's Date and Time</h2><br>
+            <h1 onload="busari()" id="tunde"></h1>
+          </div>
         </div>
-    </div> -->
+    </div>
 
 
     <div>
@@ -128,8 +124,10 @@
         function page() {
             let sayHi = document.querySelector('#greet').innerHTML;
             let yourName = prompt("what is your name");
+            let a ='visitor'
             let greeting = sayHi.replace("visitor", yourName);
             document.querySelector('#greet').innerHTML = greeting;
+            
 
         };
 
@@ -153,31 +151,31 @@
         }
 
 
-
-    //     function qeenah() {
-    //     let d = new Date()
-    //     let Months = [`january`, `feburary`, `march`, `april`, `may`, `june`, `july`, `august`, `september`, `october`,
-    //       `november`, `december`
-    //     ];
-    //     let ho = d.getHours();
-    //     let mi = d.getMinutes();
-    //     let sec = d.getSeconds();
-    //     let da = d.getDate();
-    //     if (ho < 10) {
-    //       ho = `0` + ho;
-    //     }
-    //     if (da < 10) {
-    //       da = `0` + da;
-    //     }
-    //     if (mi < 10) {
-    //       mi = `0` + mi;
-    //     }
-    //     if (sec < 10) {
-    //       sec = `0` + sec;
-    //     }
-    //     document.querySelector(`#tunde`).innerHTML = `${Months[d.getMonth()]} ${da}, ${ho} : ${mi} : ${sec}`
-    //   }
-    //   let kira = setInterval(qeenah, 1000)
+        // digital time
+        function busari() {
+        let d = new Date()
+        let Months = [`January`, `Feburary`, `March`, `April`, `May`, `June`, `July`, `August`, `September`, `October`,
+          `November`, `December`
+        ];
+        let ho = d.getHours();
+        let mi = d.getMinutes();
+        let sec = d.getSeconds();
+        let da = d.getDate();
+        if (ho < 10) {
+          ho = `0` + ho;
+        }
+        if (da < 10) {
+          da = `0` + da;
+        }
+        if (mi < 10) {
+          mi = `0` + mi;
+        }
+        if (sec < 10) {
+          sec = `0` + sec;
+        }
+        document.querySelector(`#tunde`).innerHTML = `${Months[d.getMonth()]} ${da}, ${ho} : ${mi} : ${sec}`
+      }
+      let frr = setInterval(busari, 1000)
 
 
 

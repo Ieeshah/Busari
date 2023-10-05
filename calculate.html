@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cal input {
+            width: 4rem;
+            height: 3rem;
+            margin-left: 9px;
+            color: turquoise;
+            border: 1px solid plum;
+            margin: 20px;
+            font-size: 25px;
+        }
+
+        .cal button {
+            width: 3rem;
+            height: 3rem;
+            margin: 30px;
+            background-color: plum;
+            border: 2px solid plum;
+            color: turquoise;
+            font-size: 25px;
+        }
+
+        .cal h3 {
+            font-size: 30px;
+            color: blueviolet; 
+            /* color: brown; */
+        }
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .ment {
+            color: turquoise;
+        }
+
+        .borrow {
+            /* color: blueviolet; */
+            color: blueviolet; 
+        }
+
+        .borrow input {
+            width: 60%;
+            height: 3rem;
+            font-size: 20px;
+            background-color: thistle;
+            border: 1px solid thistle;
+            color: blueviolet;
+        }
+
+        select {
+            width: 20%;
+            font-size: 20px;
+            height: 3rem;
+            background-color: cornflowerblue;
+            border: 1px solid teal;
+            color: cornsilk;
+        }
+
+        .borrow .calc {
+            text-align: center;
+        }
+
+        .ment input {
+            width: 60%;
+            height: 3rem;
+            font-size: 20px;
+            background-color: thistle;
+            border: 1px solid thistle;
+            color: blueviolet;
+            
+        }
+
+        #calc {
+            background-color: rebeccapurple;
+            color: tomato;
+            border: 2px tomato solid;
+            margin: 3%;
+
+            height: 3rem;
+            font-size: 20px;
+        }
+
+        .ment .calculate {
+            text-align: center;
+        }
+
+        #calculate {
+            background-color: turquoise;
+            color: cornsilk;
+            border: 2px cornsilk solid;
+            margin: 3%;
+            height: 3rem;
+            font-size: 20px;
+        }
+        .hotel input{
+            width: 8rem;
+            height: 1.5rem;
+            border: 2px solid rgb(112, 102, 112);
+            background-color: thistle;
+        }
+        .hotel p{
+            font-size: 20px;
+            color: blueviolet;
+        }
+        .hotel{
+            border: 2px solid thistle;
+            width: 250px;
+            padding: 1rem;
+            background-color: thistle;
+            
+        }
+        .hotel button{
+            background-color: thistle;
+            color: teal;
+            border: 2px rebeccapurple solid;
+            margin: 3%;
+            font-size: 20px;
+        }
+        .hotel h2{
+            color: teal;
+        }
+        .hotel span{
+            color: teal;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="row">
+            <div class="" style="margin: 5%;">
+                <div>
+                    <div class="col sm-6" id="scrollspyHeading7">
+                        <div class="cal">
+                            <h3>
+                                Simple Calculator
+                            </h3>
+                            <input type="text" name="" id="input1" onkeyup="getAnswer()">
+    
+                            <span id="symbol"></span>
+                            <input type="text" id="input2" onkeyup="getAnswer()">
+                            <span id="answer"></span>
+                            <br>
+                            <button class="plus" onclick="return(add())">+</button>
+                            <button class="sub" onclick="minus()">-</button>
+                            <br>
+                            <button class="divide" onclick="dvd()">/</button>
+                            <button class="mul" onclick="times()">x</button>
+    
+                            <script>
+                                let a, b, c, d, k;
+    
+                                function getAnswer() {
+                                    if (a == "" || b == "") {
+                                        d.innerHTML = " fill those fields"
+                                        d.style.fontSize = `25px`
+                                        c.style.fontSize = `28px`
+                                        c.style.color = "red";
+                                        d.style.color = "red";
+                                    }
+                                    else if (isNaN(a) || isNaN(b)) {
+                                        d.innerHTML = "only number is allowed."
+                                        d.style.fontSize = `25px`
+                                        c.style.fontSize = `28px`
+                                        c.style.color = "red";
+                                        d.style.color = "red";
+                                    }
+                                    else {
+                                        d.innerHTML = `= ${k}`;
+                                        d.style.fontSize = `25px`
+                                        d.style.color = "turquoise"
+                                        c.style.color = 'turquoise'
+                                        c.style.fontSize = `28px`
+                                    }
+                                }
+    
+    
+    
+    
+                                function add() {
+                                    a = Number(document.getElementById('input1').value);
+                                    b = Number(document.getElementById('input2').value);
+                                    c = document.getElementById('symbol');
+                                    d = document.getElementById('answer');
+    
+                                    k = a + b;
+                                    c.innerHTML = '+';
+    
+                                    d.innerHTML = '=' + k;
+    
+                                    getAnswer()
+    
+                                }
+    
+                                function minus() {
+    
+                                    k = a - b;
+                                    c.innerHTML = '-';
+    
+                                    d.innerHTML = '=' + k;
+                                    getAnswer()
+    
+                                }
+    
+                                function dvd() {
+                                    k = a / b;
+                                    c.innerHTML = '/';
+    
+                                    d.innerHTML = '=' + k;
+                                    getAnswer()
+    
+                                }
+    
+                                function times() {
+                                    k = a * b;
+                                    c.innerHTML = 'x';
+    
+                                    d.innerHTML = '=' + k;
+                                    getAnswer()
+    
+                                }
+    
+                                // let btn1= document.querySelector('.plus');
+                                // let btn2= document.querySelector('.sub');
+                                // let btn3= document.querySelector('.divide');
+                                // let btn4= document.querySelector('.mul');
+    
+                                // btn1 
+                            </script>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        
+
+        <div class="unmark" >
+            <div style="margin-top: 10%;">
+                <div class=''>
+                    <div>
+                        <div class="ment"> 
+                            <div class="invest">
+                                <h1>
+                                    Investment Calculator
+                                </h1>
+                            </div>
+                            <div>
+                                <input id="input5" value="" placeholder="How much will you like to Invest?">
+                                <select name="" id="input6">
+                                    <option value="1">1 year</option>
+                                    <option value="2">2 years</option>
+                                    <option value="3">3 years</option>
+                                    <option value="4">4 years</option>
+                                    <option value="5">5 years</option>
+                                    <option value="6">6 years</option>
+                                    <option value="7">7 years</option>
+                                    <option value="8">8 years</option>
+                                    <option value="9">9 years</option>
+                                    <option value="10">10 years</option>
+                                    <option value="11">11 years</option>
+                                    <option value="12">12 years</option>
+                                </select>
+
+                                <div class="calculate">
+                                    <button id="calculate">Calculate</button>
+                                </div>
+                                <br><br>
+                                <h3 id="result"></h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                        // Investment calculator
+                        document.getElementById('calculate').addEventListener('click',
+                            function () {
+                                let Investment = document.querySelector('#input5').value;
+                                let duration = document.getElementById('input6').value;
+                                let profit = 0.1 * Investment;
+                                let withdraw = Number(profit * duration) + Number(Investment);
+                                document.getElementById('result').innerHTML =
+                                    `You will withdraw ${withdraw} in ${duration} years`
+
+                            }
+                        );
+                    </script>
+                </div>
+                <div class="">
+                    <div>
+
+                        <div class="borrow">
+                            <div class="loan">
+                                <h1>
+                                    Loan Calculator
+                                </h1>
+                            </div>
+                            <div>
+                                <input id="input3" value="" placeholder="How much do you want to borrow?">
+
+                                <select name="" id="input4">
+                                    <option value="1">1 month</option>
+                                    <option value="2">2 months</option>
+                                    <option value="3">3 months</option>
+                                    <option value="4">4 months</option>
+                                    <option value="5">5 months</option>
+                                    <option value="6">6 months</option>
+                                    <option value="7">7 months</option>
+                                    <option value="8">8 months</option>
+                                    <option value="9">9 months</option>
+                                    <option value="10">10 months</option>
+                                    <option value="11">11 months</option>
+                                    <option value="12">12 months</option>
+                                </select>
+                                <br>
+                                <div class="calc"><button id="calc">Calculate</button></div>
+
+                                <h3 id="answ"></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        // Loan Calculator
+                        document.getElementById('calc').addEventListener('click',
+                            function () {
+                                let Loan = document.getElementById('input3').value;
+                                let duration = document.getElementById('input4').value;
+                                let Interest = 0.25 * Loan;
+                                let totalpayable = Number(Loan) + Number(Interest);
+                                let monthlyrepay = totalpayable / duration
+                                let answer = document.getElementById('answ').innerHTML =
+                                    `${totalpayable} is total amount to return for ${duration} months and ${monthlyrepay} is amount to pay monthly`
+                                   
+
+
+                            }
+                        );
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <div>
+        <div>
+            <div class="hotel">
+                <div>
+                    <h2>Hotel Booking</h2>
+                    <input type="number" id="days">
+                    <button id="cal" onclick="hotel()">calculate</button>
+                    <p>Amount to pay <span id="amount"></span></p>
+                    <p>Time Left <span id="time"></span></p>
+                </div>
+            </div>
+        
+            <script>
+                
+                let amountPay = document.getElementById('amount');
+                let timeLeft = document.getElementById('time');
+        
+                function hotel(){
+                let numberDays = parseInt(document.getElementById('days').value);
+        
+                    const xmas = new Date().getTime() + (numberDays * 24 * 60 * 60 * 1000);
+                    k= setInterval(function () {
+                    let now = new Date().getTime();
+                    let distance = xmas - now;
+                    let days = Math.floor(distance / (24 * 60 * 60 * 1000));
+                    let hours = Math.floor(distance % (24 * 60 * 60 * 1000) / (60 * 60 * 1000));
+                    let minutes = Math.floor(distance % (60 * 60 * 1000) / (60 * 1000));
+                    let seconds = Math.floor(distance % (60 * 1000) / (1000));
+                    document.getElementById('time').innerHTML = `= ${days}: ${hours}: ${minutes}: ${seconds}`;
+                    if (distance <= 0) {
+                        clearInterval(k);
+                        document.getElementById('time').innerHTML = 'time up';}
+                }, 1000);
+        
+                
+                document.getElementById('amount').innerHTML=  (5000 * numberDays);
+            }
+        
+            </script>
+        </div>
+    </div>
+</body>
+</html>

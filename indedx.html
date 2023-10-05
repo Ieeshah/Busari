@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(53, 34, 34);
+            
+        }
+        .blink{
+            animation: blinker 1.5s linear infinite;
+            color: blueviolet; 
+        }
+        @keyframes blinker {
+            50%{
+                opacity: 0;
+                color: blueviolet; 
+            }
+        }
+
+        .index h2 {
+            font-size: 26px;
+            /* color: crimson; */
+            color: blueviolet; 
+            text-align: center;
+        }
+        .Eich:hover{
+            font-size: 32px;
+            cursor: pointer;
+        }
+
+        p {
+            /* color: skyblue; */
+            color: blueviolet; 
+            font-size: 20px;
+            font-style: italic;
+            margin-left: 40px;
+            margin-top: 20px;
+        }
+
+        .script table {
+            margin: 6px;
+            padding: 20px;
+        }
+
+        .script td {
+            padding: 20px;
+            color: blueviolet;
+        }
+
+        tr :hover {
+            color: steelblue;
+            font-size: 26px;
+            cursor: pointer;
+        }
+
+        .script th {
+            font-size: 22px;
+            color: cadetblue;
+            padding: 20px;
+        }
+
+        .script p {
+            font-size: 20px;
+            margin-top: 6px;
+            margin-left: 40px;
+            margin-right: 60px;
+             color: blueviolet; 
+        }
+
+        .script h1 {
+            font-size: 24px;
+            /* color: plum; */
+            color: blueviolet; 
+            margin-left: 20px;
+        }
+
+
+        .script li {
+            font-size: 20px;
+            margin-top: 10px;
+            margin-left: 40px;
+            margin-right: 60px;
+            color: blueviolet; 
+            /* color: blueviolet; */
+        }
+
+        .java {
+            margin-top: 5px;
+            margin-bottom: 15px;
+            padding: 5px;
+        }
+
+        .script u {
+            color: green;
+            cursor: pointer;
+        }
+
+        .script b {
+            color: blueviolet; 
+            /* color: purple; */
+        }
+
+        .var {
+            width: 20%;
+            height: 30rem;
+            overflow: scroll;
+            overflow-x: auto;
+
+        }
+
+        .java {
+            width: 100%;
+            height: 30rem;
+            overflow: scroll;
+            overflow-x: auto;
+        }
+
+        .key {
+            width: 20%;
+            height: 30rem;
+            overflow: scroll;
+            overflow-x: auto;
+        }
+
+        .var h3 {
+            margin: 20px;
+            color: blueviolet; 
+            /* color: deeppink; */
+            font-size: 30px;
+            text-align: justify;
+        }
+
+        .var p {
+
+            margin: 30px;
+            font-size: 20px;
+            margin-left: 40px;
+            margin-right: 80px;
+            /* color: thistle; */
+            color: blueviolet; 
+        }
+
+        .var .pizza {
+            font-style: italic;
+            /* color: skyblue; */
+            color: blueviolet; 
+            margin-left: 80px;
+            
+
+
+        }
+
+        .operator h2 {
+            font-size: 24px;
+            color: blueviolet; 
+            /* color: gray; */
+            margin: 20px;
+            text-align: center;
+        }
+
+        .operator p {
+            margin: 60px;
+            margin-top: 10px;
+            font-size: 20px;
+            color: blueviolet; 
+            /* color: darkgray; */
+        }
+
+        .cal input {
+            width: 4rem;
+            height: 3rem;
+            margin-left: 9px;
+
+            border: 1px solid plum;
+            margin: 20px;
+            font-size: 25px;
+        }
+
+        .cal button {
+            width: 3rem;
+            height: 3rem;
+            margin: 30px;
+            background-color: plum;
+            border: 2px solid plum;
+            color: cornflowerblue;
+            font-size: 25px;
+        }
+
+        .cal h3 {
+            font-size: 30px;
+            color: blueviolet; 
+            /* color: brown; */
+        }
+
+        .food h1 {
+            font-size: 40px;
+            color: blueviolet; 
+            /* color: cornflowerblue; */
+
+        }
+
+        .food button {
+            width: 6rem;
+            height: 3rem;
+            margin: 30px;
+            background-color: plum;
+            border: 2px solid plum;
+            color: cornflowerblue;
+            font-size: 25px;
+        }
+
+        .greet h1 {
+            /* color: chartreuse; */
+            color: blueviolet; 
+            font-size: 42px;
+            
+
+        }
+
+        .greet button {
+            width: 7rem;
+            height: 3rem;
+            margin: 30px;
+            background-color: white;
+            border: 2px solid plum;
+            color: plum;
+            font-size: 25px;
+        }
+
+        .greet {
+            margin-top: 10%;
+            margin-left: 10%;
+        }
+
+        .food {
+            margin-top: 10%;
+            margin-left: 10%;
+        }
+
+        .but {
+            float: right;
+            position: fixed;
+            top: 80vh;
+            right: 10;
+        }
+
+        .tropical h1 {
+            /* color: antiquewhite; */
+            font-size: 33px;
+            color: blueviolet; 
+            text-align: left;
+        }
+
+        .tropical button {
+            width: 8rem;
+            height: 2.5rem;
+            background-color: plum;
+            color: cornflowerblue;
+            border: 2px black solid;
+            font-size: 22px;
+
+        }
+
+        .tropical span {
+            font-size: 20px;
+            color: tomato;
+            text-align: center;
+        }
+
+        .tropical p {
+            text-align: left;
+            margin-left: 0;
+        }
+
+        .tropical img {
+            background-color: black;
+        }
+
+        .greet1 h1 {
+            /* color: Pink; */
+            color: blueviolet; 
+        }
+
+        .greet1 button {
+            width: 6rem;
+            height: 3rem;
+            border: 1px pink solid;
+            font-size: 26px;
+            color: blue;
+
+        }
+
+        .greet1 {
+            text-align: center;
+        }
+
+        .ment {
+            color: turquoise;
+        }
+
+        .borrow {
+            /* color: blueviolet; */
+            color: blueviolet; 
+        }
+
+        .borrow input {
+            width: 60%;
+            height: 3rem;
+            font-size: 20px;
+            background-color: thistle;
+            border: 1px solid thistle;
+            color: blueviolet;
+        }
+
+        select {
+            width: 20%;
+            font-size: 20px;
+            height: 3rem;
+            background-color: cornflowerblue;
+            border: 1px solid teal;
+            color: cornsilk;
+        }
+
+        .borrow .calc {
+            text-align: center;
+            margin: 3%;
+
+            height: 3rem;
+            font-size: 20px;
+
+
+        }
+        body{
+            background-image: url(image/simp.jpg);
+            background-repeat: repeat;
+            background-size: 100%;
+        }
+
+        .ment input {
+            width: 60%;
+            height: 3rem;
+            font-size: 20px;
+            background-color: thistle;
+            border: 1px solid thistle;
+            color: blueviolet;
+        }
+
+        #calc {
+            background-color: rebeccapurple;
+            color: tomato;
+            border: 2px tomato solid;
+        }
+
+        .ment .calculate {
+            text-align: center;
+            margin: 3%;
+
+            height: 3rem;
+            font-size: 20px;
+        }
+
+        #calculate {
+            background-color: turquoise;
+            color: cornsilk;
+            border: 2px cornsilk solid;
+        }
+        #dayy{
+            text-align: center;
+        }
+        #prime{
+            text-align: center;
+        }
+        #prime button{
+            background-color: white;
+            color: turquoise;
+            border: 2px turquoise solid;
+            font-size: 24px;
+            border-radius: 10px;
+        }
+        #prime button:hover{
+            background-color: turquoise ;
+            color: rebeccapurple;
+            border: 2px rebeccapurple solid;
+            font-weight: 500;
+            
+        }
+        #dayy button{
+            background-color: white;
+            color: rebeccapurple;
+            border: 2px rebeccapurple solid;
+            font-size: 24px;
+            border-radius: 10px;
+        }
+
+        #dayy button:hover{
+            background-color: rebeccapurple;
+            color: turquoise;
+            border: 2px turquoise solid;
+            font-weight: 500;
+            
+        }
+        .primee{
+            text-align: center;
+            color: blueviolet;
+        }
+        .today{
+            color: blueviolet; 
+            text-align: center;
+        }
+        .unmark{
+            display: inline;
+        }
+        .mark{
+            display: none;
+        }
+
+        @media screen and (max-width :768px) {
+            .mark{
+            display: block;
+            background-color: transparent;
+        }
+        .unmark{
+            display: none;
+        }
+            .index {
+                margin-left: 30px;
+            }
+
+            .java {
+
+                max-width: 100% !important;
+                min-width: 100% !important;
+
+            }
+
+
+            .var {
+                min-width: 100%;
+                max-width: 100%;
+            }
+
+            .script {
+                min-width: 100%;
+                max-width: 100%;
+            }
+
+            .operator {
+                min-width: 100%;
+                max-width: 100%;
+            }
+
+            .greet {
+                margin: 25%;
+            }
+
+            .food {
+                margin: 25%;
+            }
+            
+        }
+    </style>
+</head>
+
+<body id="all">
+
+
+    <!-- <nav id="navbar-example2" style="position: sticky; top: 0; overflow-x: hidden;"
+        class=" navbar navbar-light bg-light px-3">
+        <a class="navbar-brand" href="#">JAVASCRIPT</a>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading1">Reserved keywords in JavaScript</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading2">History of JavaScript</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading3">Variables</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading4">Operators</a>
+            </li>
+             <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">JS</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#scrollspyHeading5">Greeting</a></li>
+              <li><a class="dropdown-item" href="#scrollspyHeading6">Foodmataz</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#scrollspyHeading7">Calculator</a></li>
+              <li><a class="dropdown-item" href="#scrollspyHeading8">Guess Game</a></li>
+            </ul>
+          </li>
+        </ul>
+    </nav> -->
+
+
+    <div>
+        <div class="greet1">
+            <div class="welcome">
+                <marquee behavior="scroll" direction="left" scrollamount="18">
+                    <h1 id="greet">Welcome to my page visitor</h1>
+                </marquee>
+            </div>
+            <br><br>
+
+            <div class="visit">
+                <button onclick="page()">Greet</button>
+            </div>
+            <br><br>
+        </div>
+
+        <script>
+            // Greeting
+            function page() {
+                
+                let sayHi = document.querySelector('#greet').innerHTML;
+                let yourName = prompt("what is your name");
+                let greeting = sayHi.replace("visitor", yourName);
+                document.querySelector('#greet').innerHTML = greeting;
+                document.getElementById('all').style.backgroundColor ='rgb(53, 34, 34)';
+                
+
+
+            };
+        </script>
+
+    </div>
+
+
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example"
+        tabindex="0">
+
+        <div class="container">
+            <div class="row">
+                <div class="col md-6 script" id="scrollspyHeading2">
+                    <div class="java">
+                        <h1>Javascript</h1>
+                        <p> Javascript is a full fledge dynamic programming language that helps us add interactivity to
+                            our webpage.</p>
+                        <p>JavaScript was invented by <span class="Eich">Brendan Eich</span> in 1995.
+                            It was developed for Netscape 2, and became the ECMA-262 standard in 1997.
+                            After Netscape handed JavaScript over to ECMA, the Mozilla foundation continued to develop
+                            JavaScript for the Firefox browser. Mozilla's latest version was 1.8.5. (Identical to ES5).
+                            Internet Explorer (IE4) was the first browser to support ECMA-262 Edition 1 (ES1).
+                        </p>
+
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Year</th>
+                                    <th>ECMA</th>
+                                    <th>Browser</th>
+                                    <th></th>
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1995</td>
+                                    <td></td>
+                                    <td>JavaScript was invented by Brendan Eich</td>
+
+                                </tr>
+                                <tr>
+                                    <td>1996</td>
+                                    <td></td>
+                                    <td>Netscape 2 was released with JavaScript 1.0</td>
+                                </tr>
+                                <tr>
+                                    <td>1997</td>
+                                    <td></td>
+                                    <td>JavaScript became an ECMA standard (ECMA-262)</td>
+                                </tr>
+                                <tr>
+                                    <td>1997</td>
+                                    <td>ES1</td>
+                                    <td>ECMAScript 1 was released</td>
+                                </tr>
+                                <tr>
+                                    <td>1997</td>
+                                    <td>ES1</td>
+                                    <td>IE was the first browser to support ES1</td>
+                                </tr>
+                                <tr>
+                                    <td>1998</td>
+                                    <td>ES2</td>
+                                    <td>ECMAScript 2 was released</td>
+                                </tr>
+                                <tr>
+                                    <td>1998</td>
+                                    <td></td>
+                                    <td>Netscape 2 was released with JavaScript 1.3</td>
+                                </tr>
+                                <tr>
+                                    <td>1999</td>
+                                    <td>ES2</td>
+                                    <td>IE was the first to support ES2</td>
+                                </tr>
+                                <tr>
+                                    <td>1999</td>
+                                    <td>ES3</td>
+                                    <td>ECMAScript 3 was released</td>
+                                </tr>
+                                <tr>
+                                    <td>2000</td>
+                                    <td>ES3</td>
+                                    <td>IE 5.5 was the first to support ES3</td>
+                                </tr>
+                                <tr>
+                                    <td>2000</td>
+                                    <td></td>
+                                    <td>Netscape 62 was released with JavaScript 1.5</td>
+                                </tr>
+                                <tr>
+                                    <td>2000</td>
+                                    <td></td>
+                                    <td>Firefox 1 was released with JavaScript 1.5</td>
+                                </tr>
+                                <tr>
+                                    <td>2008</td>
+                                    <td>ES4</td>
+                                    <td>ECMAScript 4 was abandoned</td>
+                                </tr>
+                                <tr>
+                                    <td>2009</td>
+                                    <td>ES5</td>
+                                    <td>ECMAScript 5 was released</td>
+                                </tr>
+                                <tr>
+                                    <td>2011</td>
+                                    <td>ES5</td>
+                                    <td>IE 9 was the first browser to support ES5 *</td>
+                                </tr>
+                                <tr>
+                                    <td>2011</td>
+                                    <td>ES5</td>
+                                    <td>Firefox 4 was released with JavaScript 1.8.5</td>
+                                </tr>
+                                <tr>
+                                    <td>2012</td>
+                                    <td>ES5</td>
+                                    <td>Full support for ES5 in Safari 6</td>
+                                </tr>
+                                <tr>
+                                    <td>2012</td>
+                                    <td>ES5</td>
+                                    <td>Full support for ES5 in IE 10</td>
+                                </tr>
+                                <tr>
+                                    <td>2012</td>
+                                    <td>ES5</td>
+                                    <td>Full support for ES5 in Chrome 23</td>
+                                </tr>
+                                <tr>
+                                    <td>2013</td>
+                                    <td>ES5</td>
+                                    <td>Full support for ES5 in Firefox 21</td>
+                                </tr>
+                                <tr>
+                                    <td>2013</td>
+                                    <td>ES5</td>
+                                    <td>Full support for ES5 in Opera 15</td>
+                                </tr>
+                                <tr>
+                                    <td>2014</td>
+                                    <td>ES5</td>
+                                    <td>Full support for ES5 in all browsers</td>
+                                </tr>
+                                <tr>
+                                    <td>2015</td>
+                                    <td>ES6</td>
+                                    <td>ECMAScript 6 was released</td>
+                                </tr>
+                                <tr>
+                                    <td>2016</td>
+                                    <td>ES6</td>
+                                    <td>Full support for ES6 in Chrome 51</td>
+                                </tr>
+                                <tr>
+                                    <td>2016</td>
+                                    <td>ES6</td>
+                                    <td>Full support for ES6 in Opera 38</td>
+                                </tr>
+                                <tr>
+                                    <td>2016</td>
+                                    <td>ES6</td>
+                                    <td>Full support for ES6 in Safari 10</td>
+                                </tr>
+                                <tr>
+                                    <td>2017</td>
+                                    <td>ES6</td>
+                                    <td>Full support for ES6 in Firefox 54</td>
+                                </tr>
+                                <tr>
+                                    <td>2017</td>
+                                    <td>ES6</td>
+
+                                    <td>Full support for ES6 in Edge 15</td>
+                                </tr>
+                                <tr>
+                                    <td>2018</td>
+                                    <td>ES6</td>
+                                    <td>Full support for ES6 in all browsers **</td>
+                                </tr>
+
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div>
+                        <div class="busari">
+                          <div style="text-align: center;">
+                            <h2 style="color: violet;">Today's Date and Time</h2><br>
+                            <marquee behavior="slide" scrollamount="30" direction="left" style="color: salmon;" class="blink"><h1 onload="busari()" id="tunde"  style="text-align: center;"></h1></marquee>
+                          </div>
+                        </div>
+                    </div>
+                    <script>
+                         function busari() {
+        let d = new Date();
+        let ho = d.getHours();
+        let mi = d.getMinutes();
+        let sec = d.getSeconds();
+        let da = d.getDate();
+        if (ho < 10) {
+          ho = `0` + ho;
+        }
+        if (da < 10) {
+          da = `0` + da;
+        }
+        if (mi < 10) {
+          mi = `0` + mi;
+        }
+        if (sec < 10) {
+          sec = `0` + sec;
+        }
+        document.querySelector(`#tunde`).innerHTML = `${ho} : ${mi} : ${sec}`
+      }
+      let jean = setInterval(busari, 1000)
+                    </script>
+                
+                </div>
+                
+            </div>
+        </div>
+
+        
+
+
+        <div class="container">
+            <div class="row">
+                <div class="greet" id="scrollspyHeading5">
+                    <h1>
+                        Greeting
+                    </h1>
+                    <button onclick="greet()">Greet us </button>
+                    <script>
+                        function greet() {
+
+
+                            let a = new Date().getHours();
+                            if (a > 0 && a < 11) {
+                                alert('Good Morning')
+                            }
+                            else if (a > 11 && a < 17) {
+                                alert("Good Afternoon")
+                            }
+                            else {
+                                alert("Good Evening")
+                            };
+                        }
+                    </script>
+                </div>
+                <!-- <div class="col sm-6 food" id="scrollspyHeading6">
+                    <h1>Foodmataz</h1>
+                    <button onclick="mataz()">Click</button>
+
+                    <script>
+                        function mataz() {
+                            let restaurant = {
+                                name: 'chicken republic',
+                                categories: ['africanDishes', 'soup', 'drinks',],
+                                africanDishes: ['amala', 'fufu', 'semo', 'pounded yam', 'eba'],
+                                soup: ['ewedu', 'egusi', 'vegetable', 'okra'],
+                                drinks: ['fanta', 'cola', 'fearless', 'pepsi'],
+                            };
+                            alert(`i went to ${restaurant.name} and i ate ${restaurant.africanDishes[2]} and ${restaurant.soup[1]} with ${restaurant.drinks[3]}.`)
+                            function pizzaDecider() {
+                                var pizza = "delicious"
+                            };
+                        }
+
+                    </script>
+                </div> -->
+                <div class="col sm-6 script key" id="scrollspyHeading1">
+                    <h1>Reserved keywords in JavaScript</h1>
+                    <ul>
+                        <li><b>Abstract</b> - Abstract is a non-access modifier which is applicable for classes, methods
+                            but not variables.</li>
+                        <li><b>Await</b> - The keyword Await makes JavaScript wait until the promise returns a result.
+                        </li>
+                        <li><b>Boolean</b> - Boolean is used as a <u>function</u> to get the value of a variable,
+                            object, conditions, expressions, etc. in terms of true or false.</li>
+                        <li><b>Break</b> - It breaks the loop and continues executing the code after the <u>loop</u>.
+                        </li>
+                        <li><b>Byte</b> - This uses the JavaScript typeof() operator to detect what kind of type is
+                            variable x and y.</li>
+                        <li><b>Case</b>- The switch statement evaluates an expression. The value of the expression is
+                            then compared with the values of each <b>case</b> in the structure.</li>
+                        <li><b>Catch</b> - This statement allows you to define a block of code to be executed if an
+                            error occurs in the try block.</li>
+                        <li><b>Char</b> - The char keyword is a data type that is used to store a single character.</li>
+                        <li><b>Class</b> - Classes are another way of writing constructor functions which can be used in
+                            order to create a new object using the new keyword.</li>
+                        <li><b>Const</b> - The const keyword is used to declare the constant in the function scope.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="margin: 5%;">
+            <div class="row">
+                <div class="col sm-6" id="scrollspyHeading7">
+                    <div class="cal">
+                        <h3>
+                            Simple Calculator
+                        </h3>
+                        <input type="text" name="" id="input1" onkeyup="getAnswer()">
+
+                        <span id="symbol"></span>
+                        <input type="text" id="input2" onkeyup="getAnswer()">
+                        <span id="answer"></span>
+                        <br>
+                        <button class="plus" onclick="return(add())">+</button>
+                        <button class="sub" onclick="minus()">-</button>
+                        <br>
+                        <button class="divide" onclick="dvd()">/</button>
+                        <button class="mul" onclick="times()">x</button>
+
+                        <script>
+                            let a, b, c, d, k;
+
+                            function getAnswer() {
+                                if (a == "" || b == "") {
+                                    d.innerHTML = " fill those fields"
+                                    d.style.fontSize = `25px`
+                                    c.style.fontSize = `28px`
+                                    c.style.color = "red";
+                                    d.style.color = "red";
+                                }
+                                else if (isNaN(a) || isNaN(b)) {
+                                    d.innerHTML = "only number is allowed."
+                                    d.style.fontSize = `25px`
+                                    c.style.fontSize = `28px`
+                                    c.style.color = "red";
+                                    d.style.color = "red";
+                                }
+                                else {
+                                    d.innerHTML = `= ${k}`;
+                                    d.style.fontSize = `25px`
+                                    d.style.color = "cornflowerblue"
+                                    c.style.color = 'cornflowerblue'
+                                    c.style.fontSize = `28px`
+                                }
+                            }
+
+
+
+
+                            function add() {
+                                a = Number(document.getElementById('input1').value);
+                                b = Number(document.getElementById('input2').value);
+                                c = document.getElementById('symbol');
+                                d = document.getElementById('answer');
+
+                                k = a + b;
+                                c.innerHTML = '+';
+
+                                d.innerHTML = '=' + k;
+
+                                getAnswer()
+
+                            }
+
+                            function minus() {
+
+                                k = a - b;
+                                c.innerHTML = '-';
+
+                                d.innerHTML = '=' + k;
+                                getAnswer()
+
+                            }
+
+                            function dvd() {
+                                k = a / b;
+                                c.innerHTML = '/';
+
+                                d.innerHTML = '=' + k;
+                                getAnswer()
+
+                            }
+
+                            function times() {
+                                k = a * b;
+                                c.innerHTML = 'x';
+
+                                d.innerHTML = '=' + k;
+                                getAnswer()
+
+                            }
+
+                            // let btn1= document.querySelector('.plus');
+                            // let btn2= document.querySelector('.sub');
+                            // let btn3= document.querySelector('.divide');
+                            // let btn4= document.querySelector('.mul');
+
+                            // btn1 
+                        </script>
+                    </div>
+                </div>
+                <div class="col sm-6 var" id="scrollspyHeading3">
+                    <h3>Copious example between var, let and const</h3>
+                    <p>Var declarations were the only type of variables before ES6, and Let and Const were introduced to
+                        fix some of its issues. The main differences with Var are its scope, its ability to be
+                        re-declared and updated, and the fact that it is hoisted. Now, as far as scope goes, var is
+                        globally scoped if it is declared outside of a function, functionally scoped if declared within
+                        one. For example:</p>
+
+
+                    <div>
+                        <p class="pizza">
+                            function pizzaDecider(){
+                            <br>
+                            var pizza = "delicious"
+                            <br>
+                            };
+                            <br>
+
+                            console.log(pizza);
+                        </p>
+                    </div>
+
+                    <p>If we can redeclare a var that’s globally scoped at any time, one small mistake could ruin
+                        otherwise perfectly good code. This is a big reason why let and const are preferred. Another
+                        little unique wrinkle about var is the fact that it’s hoisted. I’m not going to go super deep
+                        into hoisting, but for our purposes, it’s a pretty simple concept. Take this for example:</p>
+
+
+                    <p>We get undefined instead of an error, because variables declared with var are “hoisted” to the
+                        top of their execution context. This is not the case with let or const.</p>
+
+
+                    <p>Let variables, unlike var, is block scoped, which means it scoped to a bunch of code surrounded
+                        by curly brackets. This can mean a function, or a loop or what have you. Another difference
+                        between let and var is that let can be updated, but not re declared.</p>
+
+
+                    <p>This is the main difference between let and const. They’re both scoped the same, but const cannot
+                        be updated or re declared whatsoever.</p>
+
+
+                    <p>So just to recap, the main differences are: var declarations are globally or functionally scoped
+                        while let and const are block scoped. Var can be updated and re declared, let can be updated but
+                        not re declared, and const can do neither. Var is hoisted, while let and const are not.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6" style="margin-top: 3%; margin-bottom: 5%;">
+                    <div>
+                        <h1 class="primee">
+                            Prime Number
+                        </h1>
+                        <div id="prime">
+                            <button onclick="myPrime()">Click</button>
+                        </div>
+                    </div>
+
+                    <script>
+
+                        // Prime Number
+                        function myPrime() {
+                            let a = prompt('enter any prime number')
+                            if (a < 1 || isNaN(a) || !a) {
+                                console.log('Invalid Input');
+
+                            }
+                            else if (a == 2) {
+                                alert(`${a} is a prime number`);
+                            }
+                            else {
+                                for (n = 2; n < a; n++) {
+                                    if (a % n == 0) {
+                                        alert(`${a} is not a prime number`)
+                                        break;
+                                    }
+                                }
+                                if (n == a) {
+                                    alert(`${a} is a prime number`);
+                                }
+
+                            }
+                        }
+                    </script>
+                </div>
+                <div class="col-sm-6" style="margin-top: 3%;">
+
+                    <div>
+
+                        <div class="today">
+                            <div>
+                                <h2>Click below to check for today's date</h2>
+                                <span id="datee"></span> 
+                                <div id="dayy">
+                                    <button onclick="dayy()">Click</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <script>
+                        //get day
+                        function dayy() {
+                            let aDay = new Date().getDay();
+                            let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+
+                            if (aDay == 0) {
+                                alert(`Today is ${days[aDay]} Go to Church`);
+                            }
+                            else if (aDay == 6) {
+                                alert(`Today is ${days[aDay]} Time to party`);
+                            }
+                            else if (aDay == 5) {
+                                alert(`Today is ${days[aDay]} Go to Mosque`);
+                            }
+                            else {
+                                alert(`Today is ${days[aDay]} Go to work`);
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        <div class="container">
+            <div class="row">
+
+                <div class="col sm-6 operator" id="scrollspyHeading4">
+                    <h2>
+
+                        The Similarities and difference between ==, !=, ===, !==
+                    </h2>
+                    <p>
+                        The main difference between the == and === operator in javascript is that the == operator does
+                        the type conversion of the operands before comparison, whereas the === operator compares the
+                        values as well as the data types of the operands
+                        != will only check value regardless of operands type. but !== is used to compare both value &
+                        type of 2 operands that are being compared to each other
+                    </p>
+                </div>
+                <div class="col sm-6" id="scrollspyHeading8">
+                    <h1 style="color: blueviolet; font-size: 26px; text-align: center; margin: 18%;">Guess the Nigeria age
+                        game</h1>
+                    <button onclick="aisha()"
+                        style="background-color: slateblue; width: 18%; height: 3rem; font-size: 26px; border-radius: 19px; border: 2px slateblue solid; margin-left: 40%;">Click</button>
+                    <script>
+                        function aisha() {
+                            let age = prompt('How old is Nigeria?');
+                            let f = Number(age);
+                            switch (f) {
+                                case 50:
+                                    alert("not correct");
+                                    break;
+                                case 63:
+                                    alert("correct");
+                                    break;
+                                case 62:
+                                    alert("almost correct")
+                                    break;
+                                default:
+                                    alert('you are wrong');
+                            }
+                        }
+
+
+                    </script>
+
+                </div>
+            </div>
+            <div class="container unmark" style="margin-top: 5%;">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div>
+                            <div class="ment" style="text-align: center;">
+                             <marquee behavior="slide" direction="right" scrollamount="20" hspace="20"> 
+                                <div class="invest">
+                                    <h1>
+                                        Investment Calculator
+                                    </h1>
+                                </div>
+                                <div>
+                                    <input id="input5" value="" placeholder="How much will you like to Invest?">
+                                    <select name="" id="input6">
+                                        <option value="1">1 year</option>
+                                        <option value="2">2 years</option>
+                                        <option value="3">3 years</option>
+                                        <option value="4">4 years</option>
+                                        <option value="5">5 years</option>
+                                        <option value="6">6 years</option>
+                                        <option value="7">7 years</option>
+                                        <option value="8">8 years</option>
+                                        <option value="9">9 years</option>
+                                        <option value="10">10 years</option>
+                                        <option value="11">11 years</option>
+                                        <option value="12">12 years</option>
+                                    </select>
+    
+                                    <div class="calculate">
+                                        <button id="calculate">Calculate</button>
+                                    </div>
+                                    <br><br>
+                                    <h3 id="result"></h3>
+                                </div>
+                            </marquee>
+                            </div>
+                        </div>
+    
+                        <script>
+                            // Investment calculator
+                            document.getElementById('calculate').addEventListener('click',
+                                function () {
+                                    let Investment = document.querySelector('#input5').value;
+                                    let duration = document.getElementById('input6').value;
+                                    let profit = 0.1 * Investment;
+                                    let withdraw = Number(profit * duration) + Number(Investment);
+                                    document.getElementById('result').innerHTML =
+                                        `You will withdraw ${withdraw} in ${duration} years`
+    
+                                }
+                            );
+                        </script>
+                    </div>
+                    <div class="col-lg-6">
+                        <div>
+    
+                            <div class="borrow">
+                                <marquee behavior="slide" direction="left" scrollamount="20">
+                                <div class="loan">
+                                    <h1>
+                                        Loan Calculator
+                                    </h1>
+                                </div>
+                                <div>
+                                    <input id="input3" value="" placeholder="How much do you want to borrow?">
+    
+                                    <select name="" id="input4">
+                                        <option value="1">1 month</option>
+                                        <option value="2">2 months</option>
+                                        <option value="3">3 months</option>
+                                        <option value="4">4 months</option>
+                                        <option value="5">5 months</option>
+                                        <option value="6">6 months</option>
+                                        <option value="7">7 months</option>
+                                        <option value="8">8 months</option>
+                                        <option value="9">9 months</option>
+                                        <option value="10">10 months</option>
+                                        <option value="11">11 months</option>
+                                        <option value="12">12 months</option>
+                                    </select>
+                                    <br>
+                                    <div class="calc"><button id="calc">Calculate</button></div>
+    
+                                    <h3 id="answ"></h3>
+                                </div>
+                            </marquee>
+                            </div>
+                        </div>
+                        <script>
+                            // Loan Calculator
+                            document.getElementById('calc').addEventListener('click',
+                                function () {
+                                    let Loan = document.getElementById('input3').value;
+                                    let duration = document.getElementById('input4').value;
+                                    let Interest = 0.25 * Loan;
+                                    let totalpayable = Number(Loan) + Number(Interest);
+                                    let monthlyrepay = totalpayable / duration
+                                    let answer = document.getElementById('answ').innerHTML =
+                                        `${totalpayable} is total amount to return for ${duration} months and ${monthlyrepay} is amount to pay monthly`
+                                       
+    
+    
+                                }
+                            );
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mark" style="margin-top: 5%;">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div>
+                            <div class="ment" style="text-align: center;"> 
+                                <div class="invest">
+                                    <h1>
+                                        Investment Calculator
+                                    </h1>
+                                </div>
+                                <div>
+                                    <input id="input5" value="" placeholder="How much will you like to Invest?">
+                                    <select name="" id="input6">
+                                        <option value="1">1 year</option>
+                                        <option value="2">2 years</option>
+                                        <option value="3">3 years</option>
+                                        <option value="4">4 years</option>
+                                        <option value="5">5 years</option>
+                                        <option value="6">6 years</option>
+                                        <option value="7">7 years</option>
+                                        <option value="8">8 years</option>
+                                        <option value="9">9 years</option>
+                                        <option value="10">10 years</option>
+                                        <option value="11">11 years</option>
+                                        <option value="12">12 years</option>
+                                    </select>
+    
+                                    <div class="calculate">
+                                        <button id="calculate">Calculate</button>
+                                    </div>
+                                    <br><br>
+                                    <h3 id="result"></h3>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <script>
+                            // Investment calculator
+                            document.getElementById('calculate').addEventListener('click',
+                                function () {
+                                    let Investment = document.querySelector('#input5').value;
+                                    let duration = document.getElementById('input6').value;
+                                    let profit = 0.1 * Investment;
+                                    let withdraw = Number(profit * duration) + Number(Investment);
+                                    document.getElementById('result').innerHTML =
+                                        `You will withdraw ${withdraw} in ${duration} years`
+    
+                                }
+                            );
+                        </script>
+                    </div>
+                    <div class="col-lg-6">
+                        <div>
+    
+                            <div class="borrow">
+                                <div class="loan">
+                                    <h1>
+                                        Loan Calculator
+                                    </h1>
+                                </div>
+                                <div>
+                                    <input id="input3" value="" placeholder="How much do you want to borrow?">
+    
+                                    <select name="" id="input4">
+                                        <option value="1">1 month</option>
+                                        <option value="2">2 months</option>
+                                        <option value="3">3 months</option>
+                                        <option value="4">4 months</option>
+                                        <option value="5">5 months</option>
+                                        <option value="6">6 months</option>
+                                        <option value="7">7 months</option>
+                                        <option value="8">8 months</option>
+                                        <option value="9">9 months</option>
+                                        <option value="10">10 months</option>
+                                        <option value="11">11 months</option>
+                                        <option value="12">12 months</option>
+                                    </select>
+                                    <br>
+                                    <div class="calc"><button id="calc">Calculate</button></div>
+    
+                                    <h3 id="answ"></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            // Loan Calculator
+                            document.getElementById('calc').addEventListener('click',
+                                function () {
+                                    let Loan = document.getElementById('input3').value;
+                                    let duration = document.getElementById('input4').value;
+                                    let Interest = 0.25 * Loan;
+                                    let totalpayable = Number(Loan) + Number(Interest);
+                                    let monthlyrepay = totalpayable / duration
+                                    let answer = document.getElementById('answ').innerHTML =
+                                        `${totalpayable} is total amount to return for ${duration} months and ${monthlyrepay} is amount to pay monthly`
+                                       
+    
+    
+                                }
+                            );
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!-- <div class="tropical" id="tropic">
+                <h1>Tropicana fruit juice</h1>
+                <p>No matter which great flavor you choose, you can count on a burst of brightness in every bottle.</p>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm my-2">
+                            <img src="image/water.png" alt="#" width="120">
+                            <br>
+                            <span>Watermelon Juice</span>
+                            <br>
+                            <button onclick="melonJuice()">See Recipe</button>
+                        </div>
+                        <div class="col-sm my-2">
+                            <img src="image/orange.png  " alt="#" width="120">
+                            <br>
+                            <span>Orange Juice</span>
+                            <br>
+                            <button onclick="orangeJuice()">See Recipe</button>
+                        </div>
+                        <div class="col-sm my-2">
+                            <img src="image/strawberry.png" alt="#" width="120">
+                            <br>
+                            <span>Strawberry Juice</span>
+                            <br>
+                            <button onclick="berryJuice()">See Recipe</button>
+                        </div>
+                        <div class="col-sm my-2">
+                            <img src="image/mixed.png" alt="#" width="120">
+                            <br>
+                            <span>Mixed Juice</span>
+                            <br>
+                            <button onclick="mixedJuice()">See Recipe</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <script>
+                function tropicalFruit(watermelon, orange, strawberry,) {
+                    const juice = `Every glass is brimming with Vitamin C. A refreshing taste of pure sunshine. ${watermelon}% watermelon, ${orange}% orange, ${strawberry}% strawberry, 50% less sugar and 100% great taste. With such a wide variety of fresh flavors, our juices are made to give you a burst of brightness any time of day`; return juice;
+                }
+                function melonJuice() {
+                    const melonFruit = tropicalFruit(99, 0, 0)
+                    alert(melonFruit);
+                };
+                function orangeJuice() {
+                    const orangeFruit = tropicalFruit(0, 99, 0)
+                    alert(orangeFruit);
+                };
+                function berryJuice() {
+                    const berryFruit = tropicalFruit(0, 0, 99)
+                    alert(berryFruit);
+                };
+                function mixedJuice() {
+                    const mixedFruit = tropicalFruit(33, 33, 33)
+                    alert(mixedFruit);
+                };
+            </script> -->
+
+
+            
+
+
+
+
+            <a href="index.html" class="but" style="font-size: 40px;"> <i class="bi bi-arrow-up-short"></i></a>
+
+</body>
+
+</html>

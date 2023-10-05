@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+         
+        }
+        .history .row {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 1rem;
+        }
+
+        .history .col button {
+            display: block;
+            /* display: block;
+            margin: 20px;
+            border-radius: 10px;
+            padding: 6px 17px 6px 17px;
+            border: 1px #71A0EC solid;
+            background-color: #00031F;
+            color: white;
+            font-size: 20px; */
+            cursor: pointer;
+        }
+
+        .history .col {
+            /* padding: 28px; */
+            padding-bottom: 60px;
+            /* width: 200px; */
+            /* position: static;  */
+            /* left: 2; */
+
+        }
+        .history img{
+            /* margin: 5%;
+            width: 500px; */
+            width: 90%;
+            padding-top: 25%;
+            padding-left: 5%;
+        }
+        .history .cols {
+            /* margin-left: 200px; */
+            width: 29rem;
+            height: 30rem;
+            overflow: auto;
+            overflow-x: hidden;
+            
+        }
+
+        /* .party, .variables, .keywords, .operator{
+            margin-top: 4%;
+        } */
+        .history .over{
+            
+            /* width: 2000px; */
+            display: flex;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            
+        }
+        .history .flex{
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 1rem;
+            width: 60rem;
+           
+        }
+        .history .row-3{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr ;
+            gap: 5rem; 
+        }
+        .history .footer{
+            background-color: black;
+            /* background-size: 900px; */
+            /* text-align: center; */
+            opacity: 5;
+            color: white;
+            font-size: 25px;
+            margin-top: 2%;
+
+        }
+        nav ul{
+            display: flex; 
+            list-style-type: none; 
+            margin-left: 17%;
+            position: relative;
+            /* text-align: right; */
+            /* left: 50rem; */
+        }
+        nav a{
+            text-decoration: none;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <nav style="display: inline;">
+            <a href="">Home</a>
+            <a href="">JavaScript</a>
+            <a href="">Calculator</a>
+            <a href="">Time</a>
+            <ul>
+               <li> <a href="">Number game</a></li>
+               <li> <a href="">Prime Number</a></li>
+               <li> <a href="">Date</a> </li>
+               <li><a href="">Greet Us</a></li> 
+            </ul>
+
+        </nav>
+    </div>
+    <div class="container">
+        
+        <div class="row">
+            <div class="col">
+                <div>
+                    <button onclick="java()">Javascript</button>
+                    <button onclick="vari()">Variables</button>
+                    <button onclick="key()">Keywords</button>
+                    <button onclick="oper()">Operators</button>
+                </div>
+
+            </div>
+            <div class='over'>
+                
+                <div class="party" id="jav">
+                    <div class="flex">
+                        <div>
+                            <img src="image/jav.jpeg" alt="">
+                        </div>
+
+                        <div class="cols">
+                            <div class="java">
+                                <h1>Javascript</h1>
+                                <p> Javascript is a full fledge dynamic programming language that helps us add
+                                    interactivity to
+                                    our webpage.</p>
+                                <p>JavaScript was invented by <span class="Eich">Brendan Eich</span> in 1995.
+                                    It was developed for Netscape 2, and became the ECMA-262 standard in 1997.
+                                    After Netscape handed JavaScript over to ECMA, the Mozilla foundation continued to
+                                    develop
+                                    JavaScript for the Firefox browser. Mozilla's latest version was 1.8.5. (Identical
+                                    to ES5).
+                                    Internet Explorer (IE4) was the first browser to support ECMA-262 Edition 1 (ES1).
+                                </p>
+
+
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Year</th>
+                                            <th>ECMA</th>
+                                            <th>Browser</th>
+                                            <th></th>
+                                        </tr>
+
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1995</td>
+                                            <td></td>
+                                            <td>JavaScript was invented by Brendan Eich</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>1996</td>
+                                            <td></td>
+                                            <td>Netscape 2 was released with JavaScript 1.0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1997</td>
+                                            <td></td>
+                                            <td>JavaScript became an ECMA standard (ECMA-262)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1997</td>
+                                            <td>ES1</td>
+                                            <td>ECMAScript 1 was released</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1997</td>
+                                            <td>ES1</td>
+                                            <td>IE was the first browser to support ES1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1998</td>
+                                            <td>ES2</td>
+                                            <td>ECMAScript 2 was released</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1998</td>
+                                            <td></td>
+                                            <td>Netscape 2 was released with JavaScript 1.3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1999</td>
+                                            <td>ES2</td>
+                                            <td>IE was the first to support ES2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1999</td>
+                                            <td>ES3</td>
+                                            <td>ECMAScript 3 was released</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2000</td>
+                                            <td>ES3</td>
+                                            <td>IE 5.5 was the first to support ES3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2000</td>
+                                            <td></td>
+                                            <td>Netscape 62 was released with JavaScript 1.5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2000</td>
+                                            <td></td>
+                                            <td>Firefox 1 was released with JavaScript 1.5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008</td>
+                                            <td>ES4</td>
+                                            <td>ECMAScript 4 was abandoned</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2009</td>
+                                            <td>ES5</td>
+                                            <td>ECMAScript 5 was released</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011</td>
+                                            <td>ES5</td>
+                                            <td>IE 9 was the first browser to support ES5 *</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2011</td>
+                                            <td>ES5</td>
+                                            <td>Firefox 4 was released with JavaScript 1.8.5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012</td>
+                                            <td>ES5</td>
+                                            <td>Full support for ES5 in Safari 6</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012</td>
+                                            <td>ES5</td>
+                                            <td>Full support for ES5 in IE 10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2012</td>
+                                            <td>ES5</td>
+                                            <td>Full support for ES5 in Chrome 23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2013</td>
+                                            <td>ES5</td>
+                                            <td>Full support for ES5 in Firefox 21</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2013</td>
+                                            <td>ES5</td>
+                                            <td>Full support for ES5 in Opera 15</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2014</td>
+                                            <td>ES5</td>
+                                            <td>Full support for ES5 in all browsers</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2015</td>
+                                            <td>ES6</td>
+                                            <td>ECMAScript 6 was released</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2016</td>
+                                            <td>ES6</td>
+                                            <td>Full support for ES6 in Chrome 51</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2016</td>
+                                            <td>ES6</td>
+                                            <td>Full support for ES6 in Opera 38</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2016</td>
+                                            <td>ES6</td>
+                                            <td>Full support for ES6 in Safari 10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2017</td>
+                                            <td>ES6</td>
+                                            <td>Full support for ES6 in Firefox 54</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2017</td>
+                                            <td>ES6</td>
+
+                                            <td>Full support for ES6 in Edge 15</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2018</td>
+                                            <td>ES6</td>
+                                            <td>Full support for ES6 in all browsers **</td>
+                                        </tr>
+
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="variables" id="var">
+                    <div class="flex">
+                        <div class="hi"><img src="image/var.jpeg" alt=""></div>
+
+                        <div class="cols">
+                            <div class="col sm-6 var" id="scrollspyHeading3">
+                                <h1>Variables</h1>
+                                <h3>Copious example between var, let and const</h3>
+                                <p>Var declarations were the only type of variables before ES6, and Let and Const were
+                                    introduced to
+                                    fix some of its issues. The main differences with Var are its scope, its ability to
+                                    be
+                                    re-declared and updated, and the fact that it is hoisted. Now, as far as scope goes,
+                                    var is
+                                    globally scoped if it is declared outside of a function, functionally scoped if
+                                    declared within
+                                    one. For example:</p>
+
+
+                                <div>
+                                    <p class="pizza">
+                                        function pizzaDecider(){
+                                        <br>
+                                        var pizza = "delicious"
+                                        <br>
+                                        };
+                                        <br>
+
+                                        console.log(pizza);
+                                    </p>
+                                </div>
+
+                                <p>If we can redeclare a var that’s globally scoped at any time, one small mistake could
+                                    ruin
+                                    otherwise perfectly good code. This is a big reason why let and const are preferred.
+                                    Another
+                                    little unique wrinkle about var is the fact that it’s hoisted. I’m not going to go
+                                    super deep
+                                    into hoisting, but for our purposes, it’s a pretty simple concept. Take this for
+                                    example:</p>
+
+
+                                <p>We get undefined instead of an error, because variables declared with var are
+                                    “hoisted” to the
+                                    top of their execution context. This is not the case with let or const.</p>
+
+
+                                <p>Let variables, unlike var, is block scoped, which means it scoped to a bunch of code
+                                    surrounded
+                                    by curly brackets. This can mean a function, or a loop or what have you. Another
+                                    difference
+                                    between let and var is that let can be updated, but not re declared.</p>
+
+
+                                <p>This is the main difference between let and const. They’re both scoped the same, but
+                                    const cannot
+                                    be updated or re declared whatsoever.</p>
+
+
+                                <p>So just to recap, the main differences are: var declarations are globally or
+                                    functionally scoped
+                                    while let and const are block scoped. Var can be updated and re declared, let can be
+                                    updated but
+                                    not re declared, and const can do neither. Var is hoisted, while let and const are
+                                    not.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="keywords" id="kew">
+                    <div class="flex">
+                        <div><img src="image/keywords.jpeg" alt=""></div>
+
+                        <div class="cols">
+                            <div class="col sm-6 script key" id="scrollspyHeading1">
+                                <h1>Reserved keywords in JavaScript</h1>
+                                <ul>
+                                    <li><b>Abstract</b> - Abstract is a non-access modifier which is applicable for
+                                        classes, methods
+                                        but not variables.</li>
+                                    <li><b>Await</b> - The keyword Await makes JavaScript wait until the promise returns
+                                        a result.
+                                    </li>
+                                    <li><b>Boolean</b> - Boolean is used as a <u>function</u> to get the value of a
+                                        variable,
+                                        object, conditions, expressions, etc. in terms of true or false.</li>
+                                    <li><b>Break</b> - It breaks the loop and continues executing the code after the
+                                        <u>loop</u>.
+                                    </li>
+                                    <li><b>Byte</b> - This uses the JavaScript typeof() operator to detect what kind of
+                                        type is
+                                        variable x and y.</li>
+                                    <li><b>Case</b>- The switch statement evaluates an expression. The value of the
+                                        expression is
+                                        then compared with the values of each <b>case</b> in the structure.</li>
+                                    <li><b>Catch</b> - This statement allows you to define a block of code to be
+                                        executed if an
+                                        error occurs in the try block.</li>
+                                    <li><b>Char</b> - The char keyword is a data type that is used to store a single
+                                        character.</li>
+                                    <li><b>Class</b> - Classes are another way of writing constructor functions which
+                                        can be used in
+                                        order to create a new object using the new keyword.</li>
+                                    <li><b>Const</b> - The const keyword is used to declare the constant in the function
+                                        scope.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="operator" id="ope">
+
+                    <div class="flex">
+                        <div><img src="image/oper.jpeg" alt=""></div>
+
+                        <div class="cols">
+                            <div class="col sm-6 operator" id="scrollspyHeading4">
+                                <h2>
+
+                                    The Similarities and difference between ==, !=, ===, !==
+                                </h2>
+                                <p>
+                                    The main difference between the == and === operator in javascript is that the ==
+                                    operator does
+                                    the type conversion of the operands before comparison, whereas the === operator
+                                    compares the
+                                    values as well as the data types of the operands
+                                    != will only check value regardless of operands type. but !== is used to compare
+                                    both value &
+                                    type of 2 operands that are being compared to each other
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function java(){
+                window.location.href = '#jav';
+                
+            }
+            function vari(){
+                window.location.href = '#var';
+            }
+            function key(){
+                window.location.href = '#kew';
+            }
+            function oper(){
+                window.location.href = '#ope';
+            }
+        </script>
+    </div>
+
+
+    <div class="footer">
+        <div class="row-3">
+            <div>
+                <ul>Javascript</ul>
+            </div>
+            <div>
+                <ul>8 pages</ul>
+                <li><a href=""></a>Meta</li>
+                <li><a href="">Mongodb</a></li>
+                <li><a href="">Asana</a></li>
+                <li><a href="">Salesforce</a></li>
+                <li><a href="">Oyo</a></li>
+                <li><a href="">Netflix</a></li>
+                <li><a href="">Uber</a></li>
+                <li><a href="">Zoom</a></li>
+            </div>
+            <div>
+                <ul>React</ul>
+                <li><a href="">Portfolio</a></li>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
