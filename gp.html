@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
+  <div>
     <div>
-        <h2>Source Array</h2>
-        <ul id="sourceList">
-          <li> Item 1<input type="checkbox" value="Item 1"></li>
-          <li> Item 2<input type="checkbox" value="Item 2"></li>
-          <li> Item 3<input type="checkbox" value="Item 3"></li>
-        </ul>
-      </div>
-      
-      <div>
-        <h2>Target Array</h2>
-        <ul id="targetList">
-          <!-- This is where selected items will be added -->
-        </ul>
-      </div>
-
-      <script>
-        // Get references to the source and target lists
+      <h2>Source Array</h2>
+      <ul id="sourceList">
+        <li><input type="checkbox" value="Item 1"> Item 1</li>
+        <li><input type="checkbox" value="Item 2"> Item 2</li>
+        <li><input type="checkbox" value="Item 3"> Item 3</li>
+      </ul>
+    </div>
+    
+    <div>
+      <h2>Target Array</h2>
+      <ul id="targetList">
+        <!-- This is where selected items will be added -->
+      </ul>
+    </div>
+    
+  </div>
+  <!-- <script>
+    // Get references to the source and target lists
 const sourceList = document.getElementById('sourceList');
 const targetList = document.getElementById('targetList');
 
@@ -38,12 +40,118 @@ checkboxes.forEach((checkbox) => {
 
       // Remove the list item from the source list
       this.parentElement.remove();
-    }
+    } else {
+      // If the checkbox is unchecked, move the corresponding list item back to the source list
+      const listItem = this.parentElement.cloneNode(true);
+      sourceList.appendChild(listItem);
 
+      // Remove the list item from the target list
+      this.parentElement.remove();
+    }
   });
 });
 
-      </script>
+  </script> -->
+
+  <!-- <script>
+// Get references to the source and target lists
+const sourceList = document.getElementById('sourceList');
+const targetList = document.getElementById('targetList');
+
+// Function to move an item from target to source
+function moveItemBack(item) {
+  sourceList.appendChild(item);
+}
+
+// Add event listeners to all checkboxes in the source list
+const checkboxes = sourceList.querySelectorAll('input[type="checkbox"]');
+checkboxes.forEach((checkbox) => {
+  checkbox.addEventListener('change', function () {
+    if (this.checked) {
+      // If the checkbox is checked, move the corresponding list item to the target list
+      const listItem = this.parentElement.cloneNode(true);
+      targetList.appendChild(listItem);
+
+      // Remove the list item from the source list
+      this.parentElement.remove();
+    } else {
+      // If the checkbox is unchecked, move the corresponding list item back to the source list
+      const listItem = this.parentElement.cloneNode(true);
+      moveItemBack(listItem);
+
+      // Remove the list item from the target list
+      this.parentElement.remove();
+    }
+  });
+});
+
+
+  </script> -->
+
+ 
+
+<!-- <script>
+  // Get references to the source and target lists
+  const sourceList = document.getElementById('sourceList');
+  const targetList = document.getElementById('targetList');
+
+  // Array to keep track of checked items
+  const checkedItems = [];
+
+  // Function to move an item back to the source list
+  function moveItemBack(item) {
+    sourceList.appendChild(item);
+  }
+
+  // Add event listeners to all checkboxes in the source list
+  const checkboxes = sourceList.querySelectorAll('input[type="checkbox"]');
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener('change', function () {
+      if (this.checked) {
+        // If the checkbox is checked, move the corresponding list item to the target list
+        const listItem = this.parentElement.cloneNode(true);
+        targetList.appendChild(listItem);
+
+        // Remove the list item from the source list
+        this.parentElement.remove();
+
+        // Add the checked item to the tracking array
+        checkedItems.push(listItem);
+      } else {
+        // If the checkbox is unchecked, find the corresponding item in the tracking array
+        const index = checkedItems.findIndex((item) => item.textContent === this.parentElement.textContent);
+        if (index !== -1) {
+          // Move the item back to the source list using splice
+          moveItemBack(checkedItems[index]);
+          checkedItems.splice(index, 1);
+        }
+      }
+    });
+  });
+</script> -->
+
+ <script>
+  // Get references to the source and target lists
+const sourceList = document.getElementById('sourceList');
+const targetList = document.getElementById('targetList');
+
+// Add event listeners to all checkboxes in the source list
+const checkboxes = sourceList.querySelectorAll('input[type="checkbox"]');
+checkboxes.forEach((checkbox) => {
+  checkbox.addEventListener('change', function () {
+    const listItem = this.parentElement;
+
+    if (this.checked) {
+      // If the checkbox is checked, move the corresponding list item to the target list
+      targetList.appendChild(listItem);
+    } else {
+      // If the checkbox is unchecked, move the corresponding list item back to the source list
+      sourceList.appendChild(listItem);
+    }
+  });
+});
+
+ </script>
 </body>
 </html>
 
