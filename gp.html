@@ -4,20 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    .row{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  </style>
 </head>
 <body>
-  <div>
-    <div>
-      <h2>Source Array</h2>
+  <div class="row">
+    <div class="add">
+      <h2>Add Subject</h2>
       <ul id="sourceList">
-        <li><input type="checkbox" value="Item 1"> Item 1</li>
-        <li><input type="checkbox" value="Item 2"> Item 2</li>
-        <li><input type="checkbox" value="Item 3"> Item 3</li>
+        <li>Mathematics<input type="checkbox" value="1"></li>
+        <li>Government<input type="checkbox" value="2"></li>
+        <li>Literature<input type="checkbox" value="3"></li>
+        <li>History<input type="checkbox" value="4"></li>
+        <li>Biology<input type="checkbox" value="5"></li>
+        <li>Physics<input type="checkbox" value="6"></li>
+        <li>English<input type="checkbox" value="7"></li>
+        <li>French<input type="checkbox" value="8"></li>
+        <li>Yoruba<input type="checkbox" value="9"></li>
       </ul>
     </div>
     
     <div>
-      <h2>Target Array</h2>
+      <h2>Delete Subject</h2>
       <ul id="targetList">
         <!-- This is where selected items will be added -->
       </ul>
